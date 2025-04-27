@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Clase 4 - Listas: Propiedades, Operaciones, Indexación y Slicing</title>
+</head>
+<body>
+    <h1>Clase 4 - Listas: Propiedades, Operaciones, Indexación y Slicing</h1>
+
+    <h2>Objetivos de Aprendizaje</h2>
+    <ul>
+        <li>Definir y manipular listas en Python.</li>
+        <li>Aplicar operaciones básicas: agregar, eliminar, buscar, modificar.</li>
+        <li>Utilizar técnicas de indexación positiva y negativa.</li>
+        <li>Aplicar slicing para obtener sublistas.</li>
+        <li>Manejar cadenas como listas de caracteres.</li>
+    </ul>
+
+    <h2>Contenido</h2>
+
+    <h3>¿Qué es una Lista?</h3>
+    <p>Una <strong>lista</strong> es una colección ordenada, mutable y que puede contener tipos heterogéneos.</p>
+    <pre><code>inventario = ["tornillos", "tuercas", "engranajes"]</code></pre>
+
+    <h3>Operaciones Básicas</h3>
+    <ul>
+        <li>Agregar: <code>inventario.append("correas")</code></li>
+        <li>Eliminar: <code>inventario.remove("tuercas")</code></li>
+        <li>Acceder: <code>print(inventario[0])</code></li>
+        <li>Buscar: <code>"correas" in inventario</code></li>
+    </ul>
+
+    <h3>Indexación de Listas</h3>
+    <p>Índices positivos y negativos permiten acceder a elementos:</p>
+    <pre><code>
+productos = ["motor", "válvula", "sensor"]
+
+print(productos[0])  # motor
+print(productos[-1]) # sensor
+    </code></pre>
+
+    <h3>Sublistas (Slicing)</h3>
+    <p>Permite obtener porciones de listas:</p>
+    <pre><code>
+productos = ["motor", "válvula", "sensor", "bomba"]
+
+print(productos[1:3])  # ['válvula', 'sensor']
+print(productos[:2])   # ['motor', 'válvula']
+    </code></pre>
+
+    <h3>Manejo de Cadenas como Listas</h3>
+    <pre><code>
+nombre = "logística"
+
+print(nombre[0])   # l
+print(nombre[2:6]) # gíst
+    </code></pre>
+
+    <h2>Resumen de la Clase</h2>
+    <ul>
+        <li>Las listas permiten organizar y procesar grandes volúmenes de datos.</li>
+        <li>El acceso a elementos se facilita mediante indexación y slicing.</li>
+        <li>Las cadenas también pueden ser manipuladas como listas de caracteres.</li>
+    </ul>
+
+    <footer>
+        <p>Universidad de Guayaquil - Facultad de Ingeniería Industrial</p>
+    </footer>
+</body>
+</html>
