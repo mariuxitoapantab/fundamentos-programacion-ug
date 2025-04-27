@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Clase 5 - Arreglos: Propiedades, Operaciones, Indexación y Slicing</title>
+</head>
+<body>
+    <h1>Clase 5 - Arreglos: Propiedades, Operaciones, Indexación y Slicing</h1>
+
+    <h2>Objetivos de Aprendizaje</h2>
+    <ul>
+        <li>Definir arreglos utilizando listas en Python.</li>
+        <li>Realizar operaciones básicas sobre arreglos.</li>
+        <li>Comprender la indexación positiva y negativa.</li>
+        <li>Aplicar slicing para extraer subconjuntos de datos.</li>
+        <li>Distinguir entre listas y arreglos NumPy.</li>
+    </ul>
+
+    <h2>Contenido</h2>
+
+    <h3>¿Qué es un Arreglo?</h3>
+    <p>En Python puro, las <strong>listas</strong> funcionan como arreglos dinámicos.  
+    Para operaciones avanzadas y alta eficiencia, se usa <strong>NumPy</strong>.</p>
+
+    <h3>Diferencias entre Lista y Arreglo</h3>
+    <ul>
+        <li><strong>Lista:</strong> permite tipos heterogéneos (mezcla de números, texto, booleanos).</li>
+        <li><strong>Arreglo NumPy:</strong> solo tipos homogéneos (todos números, o todos texto, etc.), más rápido y optimizado.</li>
+    </ul>
+
+    <h3>Operaciones Básicas</h3>
+    <pre><code>
+temperaturas = [22, 24, 26, 27, 25]
+
+# Acceso
+print(temperaturas[2])  # 26
+
+# Modificación
+temperaturas[1] = 23
+
+# Agregar elemento
+temperaturas.append(28)
+
+# Eliminar elemento
+temperaturas.pop(0)
+    </code></pre>
+
+    <h3>Indexación</h3>
+    <ul>
+        <li>Positiva: de izquierda a derecha (0, 1, 2...)</li>
+        <li>Negativa: de derecha a izquierda (-1, -2, -3...)</li>
+    </ul>
+
+    <h3>Slicing (Subarreglos)</h3>
+    <pre><code>
+# Subconjuntos de datos
+print(temperaturas[1:4])  # [23, 26, 27]
+print(temperaturas[:3])   # [23, 26, 27]
+print(temperaturas[2:])   # [26, 27, 25]
+    </code></pre>
+
+    <h3>Aplicaciones Industriales</h3>
+    <ul>
+        <li>Registro de temperaturas en hornos industriales.</li>
+        <li>Control de producción por turnos.</li>
+        <li>Inventario de repuestos y materiales.</li>
+    </ul>
+
+    <h2>Resumen de la Clase</h2>
+    <ul>
+        <li>Los arreglos permiten organizar datos de manera ordenada y eficiente.</li>
+        <li>La indexación y slicing facilitan la manipulación de grandes volúmenes de datos.</li>
+        <li>NumPy ofrece optimización adicional para cálculos científicos y de ingeniería.</li>
+    </ul>
+
+    <footer>
+        <p>Universidad de Guayaquil - Facultad de Ingeniería Industrial</p>
+    </footer>
+</body>
+</html>
