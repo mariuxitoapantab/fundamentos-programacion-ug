@@ -2,81 +2,218 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Clase 2 - Estructuras de Control y Algoritmos en PSeInt y Python</title>
+  <title>Clase 2 - Variables, Constantes, Tipos de Datos, Operadores Lógicos y Relacionales, Conversión de Tipos y Entrada/Salida</title>
   <link rel="stylesheet" href="../css/estilos.css">
 </head>
 <body>
 
-  <h1>Clase 2 - Estructuras de Control y Algoritmos en PSeInt y Python</h1>
+  <h1>Clase 2 - Variables, Constantes, Tipos de Datos, Operadores Lógicos y Relacionales, Conversión de Tipos y Entrada/Salida</h1>
   <p><strong>Fecha:</strong> 14-abr-2025</p>
   <p><strong>Modalidad:</strong> Virtual</p>
-  <p><strong>Herramienta:</strong> Psint</p>
+  <p><strong>Herramienta:</strong> Python Online</p>
+  <p><strong>➡️ Abrir Editor Online Python</strong></p>
+  <p><strong>✅ Link verificado:</strong> <a href="https://www.programiz.com/python-programming/online-compiler/" target="_blank">Funciona perfectamente</a>.</p>
 
-  <h2>📋 Objetivos de Aprendizaje</h2>
+  <h2>🎯 Objetivos de Aprendizaje</h2>
   <ul>
-    <li>Comprender las estructuras de control condicionales e iterativas.</li>
-    <li>Aplicar estructuras de control en Psint y Python.</li>
-    <li>Desarrollar algoritmos con decisiones condicionales y repeticiones.</li>
-    <li>Resolver problemas prácticos utilizando estructuras de control.</li>
+    <li>Definir variables y constantes en Python.</li>
+    <li>Utilizar operadores lógicos y relacionales.</li>
+    <li>Aplicar conversiones de tipos de datos.</li>
+    <li>Implementar entrada y salida estándar con input() y print().</li>
+    <li>Resolver problemas industriales básicos utilizando Python.</li>
   </ul>
 
   <h2>1️⃣ Contenido Académico</h2>
 
-  <h3>📖 Estructuras de Control Condicionales</h3>
-  <p>Las estructuras condicionales permiten ejecutar diferentes bloques de código según el valor de una condición.</p>
-  
-  <h4>Ejemplo en Psint:</h4>
+  <h3>📖 ¿Qué es una Variable?</h3>
+  <p>Una variable es un espacio de memoria reservado para almacenar datos que pueden cambiar durante la ejecución de un programa.</p>
+  <h4>Ejemplo simple:</h4>
   <pre><code>
-Algoritmo ControlCondicional
-    Escribir "Ingrese un número:"
-    Leer numero
-    Si numero > 0 Entonces
-        Escribir "El número es positivo."
-    Sino
-        Escribir "El número es negativo o cero."
-    FinSi
-FinAlgoritmo
+produccion_diaria = 480
+  </code></pre>
+  <p>Aquí <code>produccion_diaria</code> guarda el valor 480.</p>
+
+  <h3>📖 ¿Qué es una Constante?</h3>
+  <p>Una constante es un espacio reservado en memoria cuyo valor no debe cambiar durante la ejecución del programa.</p>
+  <p>En Python, aunque no hay constantes "protegidas" como en otros lenguajes (C++, Java), por convención se escribe su nombre en mayúsculas para indicar que no debe modificarse.</p>
+  <h4>Ejemplo básico:</h4>
+  <pre><code>
+PI = 3.1416
+  </code></pre>
+  <h4>Ejemplo aplicado a Ingeniería Industrial:</h4>
+  <pre><code>
+COSTO_FIJO = 15000  # Costo fijo mensual de una planta industrial
+VELOCIDAD_MAQUINA = 1200  # Velocidad constante en piezas/hora
+  </code></pre>
+  <p><strong>🎯 Nota:</strong> Aunque se pueden sobrescribir, se considera mala práctica cambiar el valor de una constante en Python.</p>
+
+  <h3>📖 Tipos de Datos en Python</h3>
+  <p>Los tipos de datos controlan el tipo de valor que una variable puede almacenar.</p>
+  <table border="1" cellpadding="8" cellspacing="0" align="center">
+    <thead>
+      <tr>
+        <th>Tipo</th>
+        <th>Ejemplo</th>
+        <th>Descripción</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>int</td>
+        <td>50</td>
+        <td>Número entero</td>
+      </tr>
+      <tr>
+        <td>float</td>
+        <td>3.14</td>
+        <td>Número decimal</td>
+      </tr>
+      <tr>
+        <td>str</td>
+        <td>"Producción"</td>
+        <td>Texto o cadena de caracteres</td>
+      </tr>
+      <tr>
+        <td>bool</td>
+        <td>True / False</td>
+        <td>Valor lógico</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3>📷 Imagen verificada:</h3>
+  <div style="text-align:center;">
+    <img src="https://www.scaler.com/topics/images/data-types-in-python-thumbnail.webp" alt="Tipos de Datos Python" width="600">
+  </div>
+
+  <h3>📖 Operadores Relacionales y Lógicos</h3>
+  <p>Los operadores lógicos y relacionales se utilizan para comparar valores y realizar operaciones lógicas.</p>
+  <table border="1" cellpadding="8" cellspacing="0" align="center">
+    <thead>
+      <tr>
+        <th>Operador</th>
+        <th>Descripción</th>
+        <th>Ejemplo</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>==</td>
+        <td>Igual</td>
+        <td>5 == 5 ➔ True</td>
+      </tr>
+      <tr>
+        <td>!=</td>
+        <td>Distinto</td>
+        <td>5 != 3 ➔ True</td>
+      </tr>
+      <tr>
+        <td>></td>
+        <td>Mayor que</td>
+        <td>7 > 2 ➔ True</td>
+      </tr>
+      <tr>
+        <td><</td>
+        <td>Menor que</td>
+        <td>3 < 7 ➔ True</td>
+      </tr>
+      <tr>
+        <td>and</td>
+        <td>Y lógico</td>
+        <td>True and False ➔ False</td>
+      </tr>
+      <tr>
+        <td>or</td>
+        <td>O lógico</td>
+        <td>True or False ➔ True</td>
+      </tr>
+      <tr>
+        <td>not</td>
+        <td>Negación</td>
+        <td>not True ➔ False</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3>📷 Imagen verificada:</h3>
+  <div style="text-align:center;">
+    <img src="https://miro.medium.com/max/1400/1*wPzOj7aRMx5o9Lw2StkY9A.png" alt="Operadores en Python" width="600">
+  </div>
+
+  <h3>📖 Conversión entre Tipos de Datos</h3>
+  <p>La conversión de tipos se usa para transformar una variable de un tipo de dato a otro.</p>
+  <h4>De str a int:</h4>
+  <pre><code>
+entrada = "100"
+numero = int(entrada)
+  </code></pre>
+  <h4>De str a float:</h4>
+  <pre><code>
+entrada = "3.5"
+decimal = float(entrada)
+  </code></pre>
+  <h4>De int a str:</h4>
+  <pre><code>
+cantidad = 200
+texto = str(cantidad)
+  </code></pre>
+  <h4>De bool a int:</h4>
+  <pre><code>
+estado = True
+numero_estado = int(estado)  # Devuelve 1
   </code></pre>
 
-  <h4>Ejemplo en Python:</h4>
+  <h3>📖 Entrada y Salida de Datos</h3>
+  <p>La entrada y salida de datos permite que el programa interactúe con el usuario.</p>
+  <h4>Ejemplo:</h4>
   <pre><code>
-numero = int(input("Ingrese un número:"))
-if numero > 0:
-    print("El número es positivo.")
+nombre = input("Ingrese su nombre: ")
+print("Bienvenido,", nombre)
+  </code></pre>
+
+  <h2>🧪 APE - Actividad Práctica Experimental (en clase)</h2>
+  <h4>Actividad:</h4>
+  <p>Escribir en Online Python el siguiente programa:</p>
+  <pre><code>
+produccion = int(input("Ingrese la producción del día: "))
+if produccion >= 500:
+    print("Meta de producción alcanzada.")
 else:
-    print("El número es negativo o cero.")
+    print("Producción insuficiente, revisar procesos.")
   </code></pre>
+  <h4>Objetivo:</h4>
+  <ul>
+    <li>Practicar variables, tipos de datos, operadores y entrada/salida.</li>
+    <li>Guardar el programa usando "Save" y compartir el link.</li>
+  </ul>
 
-  <h3>📖 Estructuras de Control Iterativas</h3>
-  <p>Las estructuras de control iterativas (como los bucles) repiten un bloque de código mientras se cumpla una condición.</p>
-  
-  <h4>Ejemplo en Psint (Bucle Mientras):</h4>
-  <pre><code>
-Algoritmo ControlIterativo
-    Definir contador Como Entero
-    contador = 1
-    Mientras contador <= 5 Hacer
-        Escribir "Contador: ", contador
-        contador = contador + 1
-    FinMientras
-FinAlgoritmo
-  </code></pre>
+  <h2>📝 AA - Actividad Autónoma (para casa)</h2>
+  <h4>Actividad:</h4>
+  <p>Desarrollar en Python:</p>
+  <p><strong>Problema:</strong> En un almacén, los paquetes deben pesar al menos 50 kg para ser aceptados.</p>
+  <ul>
+    <li>Pedir peso usando <code>input()</code>.</li>
+    <li>Evaluar condición.</li>
+    <li>Mostrar "Peso aceptado" o "Peso insuficiente".</li>
+  </ul>
+  <h4>Requisitos:</h4>
+  <ul>
+    <li>Subir el link del código guardado en Moodle.</li>
+  </ul>
 
-  <h4>Ejemplo en Python (Bucle While):</h4>
-  <pre><code>
-contador = 1
-while contador <= 5:
-    print("Contador:", contador)
-    contador += 1
-  </code></pre>
+  <h3>📷 Diagrama de Flujo conceptual</h3>
+  <div style="text-align:center;">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Flowchart_if_then_else_example.svg" alt="Diagrama flujo if-else" width="600">
+  </div>
 
-  <h2>2️⃣ Video de Apoyo</h2>
+  <h2>🎬 Video de Apoyo</h2>
   <p><a href="https://www.youtube.com/playlist?list=PLZmtYtnx3IcUR9P1pZ7VOWlzvizYB6EF-" target="_blank">▶️ Ver lista de reproducción - PSeInt</a></p>
 
-  <h2>📚 Referencias Bibliográficas (APA 7)</h2>
+  <h2>✅ Resumen de la Clase 2</h2>
   <ul>
-    <li>PSeInt Developers. (s.f.). <em>Pseudo Intérprete PSeInt</em>. Recuperado de <a href="https://sourceforge.net/projects/pseint/" target="_blank">https://sourceforge.net/projects/pseint/</a></li>
-    <li>FreeCodeCamp Español. (2021). <em>Curso básico de PSeInt</em> [Video]. Recuperado de <a href="https://www.youtube.com/playlist?list=PLZmtYtnx3IcUR9P1pZ7VOWlzvizYB6EF-" target="_blank">https://www.youtube.com/playlist?list=PLZmtYtnx3IcUR9P1pZ7VOWlzvizYB6EF-</a></li>
+    <li>Variables y constantes son fundamentales para estructurar datos.</li>
+    <li>Tipos de datos controlan la naturaleza de las variables.</li>
+    <li>Operadores permiten controlar el flujo lógico de los programas.</li>
+    <li>Conversiones de tipos son necesarias para operar correctamente.</li>
+    <li>Entrada y salida permiten interactuar con el usuario.</li>
   </ul>
 
   <footer style="text-align:center; margin-top:40px;">
@@ -85,3 +222,4 @@ while contador <= 5:
 
 </body>
 </html>
+
