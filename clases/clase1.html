@@ -6,43 +6,105 @@
     <link rel="stylesheet" href="../css/estilos.css">
 </head>
 <body>
-    <h1>Clase 1 - Interpretadores, Compiladores y Algoritmos</h1>
+
+    <h1>Clase 1 – Interpretadores, Compiladores, Ambientes de Programación, Conceptos de Algoritmos</h1>
+
     <h2>Objetivos de Aprendizaje</h2>
     <ul>
         <li>Distinguir entre interpretadores y compiladores.</li>
-        <li>Comprender qué es un ambiente de programación.</li>
-        <li>Entender los conceptos fundamentales de un algoritmo.</li>
-        <li>Realizar primeros ejercicios con Psint.</li>
+        <li>Conocer los ambientes de programación básicos.</li>
+        <li>Comprender los conceptos fundamentales de los algoritmos.</li>
+        <li>Realizar primeros ejercicios en Psint.</li>
     </ul>
 
-    <h2>Contenido</h2>
+    <h2>Interpretadores y Compiladores</h2>
+    <p><strong>Interpretador:</strong> ejecuta el código línea por línea. Ejemplos: Python, JavaScript.</p>
+    <p><strong>Compilador:</strong> traduce todo el código fuente a lenguaje máquina antes de ejecutarlo. Ejemplos: C, C++.</p>
 
-    <h3>Interpretadores vs Compiladores</h3>
-    <p>Un <strong>interpretador</strong> ejecuta código línea por línea. Ejemplos: Python, JavaScript.</p>
-    <p>Un <strong>compilador</strong> traduce todo el código a lenguaje máquina antes de ejecutarlo. Ejemplos: C, C++.</p>
-
-    <h3>Ambientes de Programación</h3>
-    <p>Un ambiente de programación integra herramientas como editores de código, compiladores y depuradores.</p>
+    <h3>Ejemplo visual:</h3>
     <ul>
-        <li><a href="https://www.pseint.org/" target="_blank">Descargar Psint (PseInt)</a></li>
+        <li><strong>Interpretador:</strong> Traduce línea por línea y ejecuta al momento.</li>
+        <li><strong>Compilador:</strong> Traduce todo el programa antes de ejecutarlo.</li>
     </ul>
 
-    <h3>Conceptos de Algoritmos</h3>
-    <p>Un <strong>algoritmo</strong> es un conjunto finito de pasos que resuelven un problema específico.</p>
-    <p>Propiedades: finitud, precisión, eficacia, entrada, salida.</p>
+    <h2>Ambientes de Programación</h2>
+    <p>Un ambiente de programación es un conjunto de herramientas que permite escribir, depurar y ejecutar programas.</p>
 
-    <h3>Primeros Ejercicios con Psint</h3>
-    <p>Instalamos Psint y desarrollamos el primer algoritmo: sumar dos números y mostrar el resultado.</p>
+    <ul>
+        <li><strong>Psint:</strong> Ideal para algoritmos básicos. <a href="https://www.pseint.org/" target="_blank">Sitio oficial de Psint</a></li>
+        <li><strong>IDLE:</strong> Entorno integrado de Python.</li>
+        <li><strong>VSCode:</strong> Editor de código moderno y flexible.</li>
+    </ul>
+
+    <h2>Conceptos de Algoritmos</h2>
+    <p>Un algoritmo es un conjunto de pasos finitos y ordenados que permiten resolver un problema.</p>
+
+    <h3>Propiedades de los algoritmos:</h3>
+    <ul>
+        <li><strong>Finitud:</strong> Termina en un número limitado de pasos.</li>
+        <li><strong>Precisión:</strong> Cada paso está claramente definido.</li>
+        <li><strong>Entrada:</strong> Recibe datos iniciales.</li>
+        <li><strong>Salida:</strong> Produce un resultado.</li>
+        <li><strong>Eficacia:</strong> Cada paso es sencillo de realizar.</li>
+    </ul>
+
+    <h3>Ejemplo de un algoritmo básico:</h3>
+    <ol>
+        <li>Iniciar.</li>
+        <li>Leer dos números.</li>
+        <li>Sumarlos.</li>
+        <li>Mostrar el resultado.</li>
+        <li>Fin.</li>
+    </ol>
+
+    <h2>Instalación y Primer Programa en Psint</h2>
+    <p>Para instalar Psint:</p>
+    <ul>
+        <li>Ir a: <a href="https://www.pseint.org/" target="_blank">https://www.pseint.org/</a></li>
+        <li>Descargar el instalador correspondiente.</li>
+        <li>Instalar y abrir el programa.</li>
+    </ul>
+
+    <h3>Primer ejercicio en Psint:</h3>
+    <pre><code>
+// Este programa suma dos números
+Algoritmo SumaDosNumeros
+    Definir num1, num2, suma Como Entero
+    Escribir "Ingrese primer número:"
+    Leer num1
+    Escribir "Ingrese segundo número:"
+    Leer num2
+    suma <- num1 + num2
+    Escribir "La suma es: ", suma
+FinAlgoritmo
+    </code></pre>
+
+    <h2>Video recomendado</h2>
+    <p><a href="https://www.youtube.com/watch?v=QdRyQhrfj0E" target="_blank">Introducción a Psint y Algoritmos (ver en YouTube)</a></p>
+
+    <h2>APE - Actividad Práctica Experimental (en clase)</h2>
+    <p>Instalar Psint y crear un algoritmo que pida dos números y los multiplique.</p>
+
+    <h2>AA - Actividad Autónoma (para casa)</h2>
+    <p>Crear un algoritmo que pida tres números y calcule su promedio usando Psint.</p>
 
     <h2>Resumen de la Clase</h2>
     <ul>
-        <li>Comprensión de cómo se ejecuta el código fuente.</li>
-        <li>Importancia de los ambientes de programación.</li>
-        <li>Conceptualización de algoritmos en problemas prácticos.</li>
+        <li>Interpretadores vs Compiladores.</li>
+        <li>Ambientes de programación: Psint, IDLE, VSCode.</li>
+        <li>Concepto de algoritmo y sus propiedades.</li>
+        <li>Primer ejercicio en Psint.</li>
+    </ul>
+
+    <h2>Referencias Bibliográficas (APA 7)</h2>
+    <ul>
+        <li>PSeInt Developers. (s.f.). <em>Pseudo Intérprete PSeInt</em>. Recuperado de <a href="https://www.pseint.org/" target="_blank">https://www.pseint.org/</a></li>
+        <li>FreeCodeCamp Español. (2021). <em>Curso básico de PSeInt</em> [Video]. YouTube. Recuperado de <a href="https://www.youtube.com/watch?v=QdRyQhrfj0E" target="_blank">https://www.youtube.com/watch?v=QdRyQhrfj0E</a></li>
     </ul>
 
     <footer>
         <p>Universidad de Guayaquil - Facultad de Ingeniería Industrial</p>
     </footer>
+
 </body>
 </html>
