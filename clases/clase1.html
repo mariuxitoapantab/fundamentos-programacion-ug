@@ -2,116 +2,187 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Clase 1 - Interpretadores, Compiladores y Algoritmos</title>
+    <title>Clase 1 - Interpretadores, Compiladores, Ambientes de Programación y Algoritmos</title>
     <link rel="stylesheet" href="../css/estilos.css">
 </head>
 <body>
 
-    <h1>Clase 1 – Interpretadores, Compiladores, Ambientes de Programación, Conceptos de Algoritmos</h1>
+    <h1>Clase 1 - Interpretadores, Compiladores, Ambientes de Programación y Algoritmos</h1>
+    <p><strong>Fecha:</strong> 07-abr-2025</p>
+    <p><strong>Modalidad:</strong> Virtual</p>
+    <p><strong>Herramienta:</strong> Psint</p>
 
-    <h2>Objetivos de Aprendizaje</h2>
+    <h2>🎯 Objetivos de Aprendizaje</h2>
     <ul>
-        <li>Distinguir entre interpretadores y compiladores.</li>
-        <li>Conocer los ambientes de programación básicos.</li>
-        <li>Comprender los conceptos fundamentales de los algoritmos.</li>
-        <li>Realizar primeros ejercicios en Psint.</li>
+        <li>Diferenciar los conceptos de intérprete y compilador.</li>
+        <li>Identificar los ambientes de programación más usados.</li>
+        <li>Comprender qué es un algoritmo y sus propiedades.</li>
+        <li>Instalar y utilizar Psint para desarrollar algoritmos básicos.</li>
+        <li>Crear algoritmos simples aplicados a Ingeniería Industrial.</li>
     </ul>
 
-    <h2>Interpretadores y Compiladores</h2>
-    <p>Un <strong>interpretador</strong> ejecuta el código línea por línea. Un <strong>compilador</strong> traduce todo el código fuente a lenguaje máquina antes de ejecutarlo.</p>
+    <h2>1️⃣ Contenido Académico</h2>
 
-    <h3>Tabla Comparativa</h3>
+    <h3>¿Qué es un Lenguaje de Programación?</h3>
+    <p>Un lenguaje de programación permite a los humanos dar instrucciones precisas a las computadoras para resolver problemas.</p>
+
+    <h3>📖 Concepto de Interpretador vs Compilador</h3>
+    <p><strong>Interpretador:</strong> Traduce y ejecuta el programa línea por línea. ➡️ Ejemplo: Python.</p>
+    <p><strong>Compilador:</strong> Traduce todo el programa completo y genera un archivo ejecutable. ➡️ Ejemplo: C++.</p>
+
     <table border="1" cellpadding="10">
         <thead>
             <tr>
-                <th>Tipo</th>
-                <th>Proceso</th>
+                <th>Característica</th>
+                <th>Interpretador</th>
+                <th>Compilador</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td>Interpretador</td>
-                <td>Traduce línea por línea y ejecuta al momento.</td>
+                <td>Traducción</td>
+                <td>Línea por línea</td>
+                <td>Programa completo</td>
             </tr>
             <tr>
-                <td>Compilador</td>
-                <td>Traduce todo el programa antes de ejecutarlo.</td>
+                <td>Velocidad</td>
+                <td>Más lento en ejecución</td>
+                <td>Más rápido</td>
+            </tr>
+            <tr>
+                <td>Depuración (Debugging)</td>
+                <td>Fácil, línea a línea</td>
+                <td>Más difícil en programas grandes</td>
             </tr>
         </tbody>
     </table>
 
-    <h2>Ambientes de Programación</h2>
-    <p>Un ambiente de programación es un conjunto de herramientas que permite escribir, depurar y ejecutar programas.</p>
+    <h3>📷 Imagen Conceptual</h3>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/7/7f/Interpreter_vs_Compiler.png" alt="Interpreter vs Compiler" width="600">
 
+    <h3>🌐 Ambientes de Programación</h3>
+    <p>Un ambiente de programación (IDE) reúne todo lo necesario para escribir y ejecutar programas: editor de código, depurador y gestor de proyectos.</p>
+
+    <table border="1" cellpadding="10">
+        <thead>
+            <tr>
+                <th>Ambiente</th>
+                <th>Uso</th>
+                <th>URL oficial</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Visual Studio Code</td>
+                <td>Editor de código ligero y extensible</td>
+                <td><a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a></td>
+            </tr>
+            <tr>
+                <td>PyCharm</td>
+                <td>Entorno especializado en Python</td>
+                <td><a href="https://www.jetbrains.com/pycharm/" target="_blank">PyCharm</a></td>
+            </tr>
+            <tr>
+                <td>IDLE</td>
+                <td>Entorno básico incluido con Python</td>
+                <td><a href="https://docs.python.org/3/library/idle.html" target="_blank">IDLE Python Info</a></td>
+            </tr>
+            <tr>
+                <td>Psint</td>
+                <td>Creación de algoritmos en pseudocódigo</td>
+                <td><a href="https://www.pseint.org/" target="_blank">Descargar Psint</a></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>📷 Imagen de ejemplo: IDLE (Python)</h3>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/IDLE_Python.png" alt="IDLE Python" width="600">
+
+    <h3>📖 ¿Qué es un Algoritmo?</h3>
+    <p>Un algoritmo es un conjunto de pasos ordenados para resolver un problema o realizar una tarea de manera eficiente.</p>
+
+    <h4>Propiedades:</h4>
     <ul>
-        <li><strong>Psint:</strong> Ideal para algoritmos básicos. <a href="https://www.pseint.org/" target="_blank">Descargar desde el sitio oficial</a>.</li>
-        <li><strong>IDLE (Python):</strong> Ambiente básico que viene con Python.</li>
-        <li><strong>VSCode:</strong> Editor de código muy popular para múltiples lenguajes.</li>
+        <li><strong>Definido:</strong> cada paso es claro.</li>
+        <li><strong>Finito:</strong> el algoritmo termina.</li>
+        <li><strong>Efectivo:</strong> se puede ejecutar en un tiempo razonable.</li>
     </ul>
 
-    <h2>Conceptos de Algoritmos</h2>
-    <p>Un algoritmo es una serie de pasos finitos y ordenados que resuelven un problema específico.</p>
+    <h3>📷 Diagrama básico de un Algoritmo</h3>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/4/47/Algorithm_flowchart_example.png" alt="Diagrama algoritmo" width="600">
 
-    <h3>Propiedades de los Algoritmos:</h3>
-    <ul>
-        <li><strong>Finitud:</strong> Termina en un número limitado de pasos.</li>
-        <li><strong>Precisión:</strong> Cada paso es claro y específico.</li>
-        <li><strong>Entrada:</strong> Requiere datos de entrada.</li>
-        <li><strong>Salida:</strong> Produce uno o más resultados.</li>
-        <li><strong>Eficacia:</strong> Cada paso debe ser realizable en tiempo finito.</li>
-    </ul>
+    <h2>2️⃣ Instalación y Primer Uso de Psint</h2>
 
-    <h3>Ejemplo de un Algoritmo:</h3>
+    <h3>📥 ¿Dónde descargar Psint?</h3>
+    <p><a href="https://sourceforge.net/projects/pseint/" target="_blank">▶️ Descargar Psint desde SourceForge</a></p>
+
+    <h4>Pasos:</h4>
     <ol>
-        <li>Iniciar.</li>
-        <li>Leer dos números.</li>
-        <li>Sumar los números.</li>
-        <li>Mostrar el resultado.</li>
-        <li>Finalizar.</li>
+        <li>Haz clic en Download.</li>
+        <li>Descarga el archivo <strong>psint.exe</strong>.</li>
+        <li>Ejecuta el archivo descargado.</li>
     </ol>
+    <p>✅ Psint no requiere instalación compleja, funciona directamente.</p>
 
-    <h2>Instalación y Primer Programa en Psint</h2>
-    <ul>
-        <li>Visitar el sitio oficial: <a href="https://www.pseint.org/" target="_blank">https://www.pseint.org/</a></li>
-        <li>Descargar el instalador correspondiente a tu sistema operativo.</li>
-        <li>Instalar y abrir Psint.</li>
-    </ul>
-
-    <h3>Primer ejercicio en Psint:</h3>
+    <h3>🛠 ¿Cómo hacer el primer algoritmo en Psint?</h3>
     <pre><code>
-// Programa que suma dos números
-Algoritmo SumaDosNumeros
-    Definir num1, num2, suma Como Entero
-    Escribir "Ingrese primer número:"
-    Leer num1
-    Escribir "Ingrese segundo número:"
-    Leer num2
-    suma <- num1 + num2
-    Escribir "La suma es:", suma
+Algoritmo HolaMundo
+    Escribir "¡Hola, mundo!"
+FinAlgoritmo
+    </code></pre>
+    <p>Guarda como <strong>HolaMundo.alg</strong> y ejecútalo para ver el mensaje en la consola.</p>
+
+    <h3>📷 Pantalla principal de Psint</h3>
+    <img src="https://i.postimg.cc/MXmxqH1X/pseint-interface.png" alt="Pantalla principal de Psint" width="600">
+
+    <h2>3️⃣ Ejemplo Trabajado en Psint</h2>
+
+    <p><strong>Problema práctico:</strong> En una planta de producción, se ensamblan piezas. Se requiere producir al menos 500 piezas diarias.</p>
+
+    <h4>Algoritmo en Psint:</h4>
+    <pre><code>
+Algoritmo ProduccionEficiente
+    Definir piezas Como Entero
+    Escribir "Ingrese la cantidad de piezas producidas hoy:"
+    Leer piezas
+    Si piezas >= 500 Entonces
+        Escribir "Producción eficiente."
+    Sino
+        Escribir "Producción insuficiente, revisar proceso."
+    FinSi
 FinAlgoritmo
     </code></pre>
 
-    <h2>Video de Apoyo</h2>
-    <p><a href="https://www.youtube.com/watch?v=QdRyQhrfj0E" target="_blank">▶️ Ver Introducción a Psint y Algoritmos (YouTube)</a></p>
+    <h3>📷 GIF del flujo de decisión (if-else)</h3>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/8/8d/If-else-structure.gif" alt="If-Else GIF" width="400">
 
-    <h2>APE - Actividad Práctica Experimental</h2>
-    <p><strong>Actividad en clase:</strong> Instalar Psint y crear un algoritmo que solicite dos números, los multiplique y muestre el resultado.</p>
+    <h2>4️⃣ Ejercicio Propuesto</h2>
 
-    <h2>AA - Actividad Autónoma</h2>
-    <p><strong>Actividad en casa:</strong> Crear en Psint un algoritmo que lea tres números y calcule su promedio.</p>
+    <p><strong>Situación:</strong> Un operario mide los litros de aceite lubricante usados en una máquina.</p>
 
-    <h2>Resumen de la Clase</h2>
+    <p><strong>Reto:</strong></p>
     <ul>
-        <li>Se comprendió la diferencia entre interpretadores y compiladores.</li>
-        <li>Se exploraron ambientes de programación como Psint, IDLE y VSCode.</li>
-        <li>Se definieron los conceptos de algoritmo y sus propiedades.</li>
-        <li>Se realizó la instalación y primer programa en Psint.</li>
+        <li>Solicitar al usuario la cantidad de litros usados.</li>
+        <li>Si se usan más de 100 litros, mostrar: "Exceso de consumo".</li>
+        <li>Si son 100 litros o menos, mostrar: "Consumo aceptable".</li>
     </ul>
 
-    <h2>Referencias Bibliográficas (APA 7)</h2>
+    <p><strong>🎯 Indicaciones:</strong></p>
     <ul>
-        <li>PSeInt Developers. (s.f.). <em>Pseudo Intérprete PSeInt</em>. Recuperado de <a href="https://www.pseint.org/" target="_blank">https://www.pseint.org/</a></li>
-        <li>FreeCodeCamp Español. (2021). <em>Curso básico de PSeInt</em> [Video]. YouTube. Recuperado de <a href="https://www.youtube.com/watch?v=QdRyQhrfj0E" target="_blank">https://www.youtube.com/watch?v=QdRyQhrfj0E</a></li>
+        <li>Realizar el algoritmo en Psint.</li>
+        <li>Entregar el archivo nombrado como <strong>ConsumoAceite.alg</strong>.</li>
+    </ul>
+
+    <h2>🎬 Video de Apoyo</h2>
+    <p><a href="https://www.youtube.com/watch?v=QdRyQhrfj0E" target="_blank">▶️ ¿Cómo funciona un Compilador vs Interpretador? (Ver Video en YouTube)</a></p>
+
+    <h2>✅ Resumen de la Clase</h2>
+    <ul>
+        <li>Lenguajes permiten comunicación entre humanos y computadoras.</li>
+        <li>Interpretadores ejecutan paso a paso; compiladores traducen todo antes de ejecutar.</li>
+        <li>Un ambiente de programación facilita la creación de programas.</li>
+        <li>Psint es la herramienta inicial para crear algoritmos básicos.</li>
+        <li>Primer contacto práctico: crear y ejecutar un programa simple en Psint.</li>
     </ul>
 
     <footer>
