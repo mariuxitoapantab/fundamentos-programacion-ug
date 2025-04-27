@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Clase 3 - Condicionales, Switch, Iterativas</title>
+</head>
+<body>
+    <h1>Clase 3 - Condicionales, Switch, Iterativas</h1>
+
+    <h2>Objetivos de Aprendizaje</h2>
+    <ul>
+        <li>Aplicar estructuras condicionales (`if`, `if-else`, `if-elif-else`).</li>
+        <li>Implementar el control múltiple usando `match-case` (switch).</li>
+        <li>Utilizar estructuras iterativas (`for`, `while`).</li>
+        <li>Manejar instrucciones especiales: `break`, `continue`, `pass`.</li>
+    </ul>
+
+    <h2>Introducción</h2>
+    <p><strong>Nota:</strong> En esta clase también se aplica la <strong>Lección de la Unidad 1</strong> correspondiente a los contenidos desarrollados en las clases anteriores.</p>
+
+    <h2>Contenido</h2>
+
+    <h3>Estructuras Condicionales</h3>
+    <pre><code>
+temperatura = 30
+
+if temperatura > 25:
+    print("Activar ventilación industrial")
+else:
+    print("Sistema normal")
+    </code></pre>
+
+    <h3>Switch con match-case (Python 3.10+)</h3>
+    <pre><code>
+opcion = int(input("Seleccione opción (1-3): "))
+
+match opcion:
+    case 1:
+        print("Registrar producción")
+    case 2:
+        print("Consultar inventario")
+    case 3:
+        print("Salir del sistema")
+    case _:
+        print("Opción inválida")
+    </code></pre>
+
+    <h3>Estructuras Iterativas</h3>
+    <pre><code>
+for i in range(5):
+    print("Operario número:", i+1)
+
+contador = 0
+while contador < 5:
+    print("Mantenimiento máquina:", contador+1)
+    contador += 1
+    </code></pre>
+
+    <h3>Instrucciones break, continue y pass</h3>
+    <pre><code>
+for pieza in range(1, 6):
+    if pieza == 4:
+        break
+    print("Pieza procesada:", pieza)
+
+for pieza in range(1, 6):
+    if pieza == 2:
+        continue
+    print("Pieza verificada:", pieza)
+    </code></pre>
+
+    <h2>Resumen de la Clase</h2>
+    <ul>
+        <li>Control del flujo de ejecución usando condicionales e iteraciones.</li>
+        <li>Implementación eficiente con `match-case` en Python 3.10+.</li>
+        <li>Optimización de ciclos con `break`, `continue` y `pass`.</li>
+    </ul>
+
+    <footer>
+        <p>Universidad de Guayaquil - Facultad de Ingeniería Industrial</p>
+    </footer>
+</body>
+</html>
+
