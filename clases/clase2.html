@@ -1,68 +1,87 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Clase 2 - Variables, Constantes y Tipos de Datos</title>
-    <link rel="stylesheet" href="../css/estilos.css">
+  <meta charset="UTF-8">
+  <title>Clase 2 - Estructuras de Control y Algoritmos en PSeInt y Python</title>
+  <link rel="stylesheet" href="../css/estilos.css">
 </head>
 <body>
-    <h1>Clase 2 - Variables, Constantes y Tipos de Datos</h1>
-    <h2>Objetivos de Aprendizaje</h2>
-    <ul>
-        <li>Definir variables y constantes en Python.</li>
-        <li>Utilizar operadores lógicos y relacionales.</li>
-        <li>Realizar conversiones entre tipos de datos.</li>
-        <li>Implementar entrada y salida estándar con input() y print().</li>
-    </ul>
 
-    <h2>Contenido</h2>
+  <h1>Clase 2 - Estructuras de Control y Algoritmos en PSeInt y Python</h1>
+  <p><strong>Fecha:</strong> 14-abr-2025</p>
+  <p><strong>Modalidad:</strong> Virtual</p>
+  <p><strong>Herramienta:</strong> Psint</p>
 
-    <h3>¿Qué es una Variable?</h3>
-    <p>Una variable es un espacio de memoria reservado para almacenar datos que pueden cambiar durante la ejecución.</p>
-    <pre><code>produccion_diaria = 480</code></pre>
+  <h2>📋 Objetivos de Aprendizaje</h2>
+  <ul>
+    <li>Comprender las estructuras de control condicionales e iterativas.</li>
+    <li>Aplicar estructuras de control en Psint y Python.</li>
+    <li>Desarrollar algoritmos con decisiones condicionales y repeticiones.</li>
+    <li>Resolver problemas prácticos utilizando estructuras de control.</li>
+  </ul>
 
-    <h3>¿Qué es una Constante?</h3>
-    <p>Una constante es un espacio reservado cuyo valor no debe cambiar durante el programa. Se escribe en mayúsculas.</p>
-    <pre><code>PI = 3.1416</code></pre>
+  <h2>1️⃣ Contenido Académico</h2>
 
-    <h3>Tipos de Datos en Python</h3>
-    <ul>
-        <li><strong>int</strong>: enteros (ej. 50)</li>
-        <li><strong>float</strong>: decimales (ej. 3.14)</li>
-        <li><strong>str</strong>: textos (ej. "Producción")</li>
-        <li><strong>bool</strong>: booleanos (True/False)</li>
-    </ul>
+  <h3>📖 Estructuras de Control Condicionales</h3>
+  <p>Las estructuras condicionales permiten ejecutar diferentes bloques de código según el valor de una condición.</p>
+  
+  <h4>Ejemplo en Psint:</h4>
+  <pre><code>
+Algoritmo ControlCondicional
+    Escribir "Ingrese un número:"
+    Leer numero
+    Si numero > 0 Entonces
+        Escribir "El número es positivo."
+    Sino
+        Escribir "El número es negativo o cero."
+    FinSi
+FinAlgoritmo
+  </code></pre>
 
-    <h3>Operadores Relacionales y Lógicos</h3>
-    <ul>
-        <li>Relacionales: ==, !=, >, &lt;, >=, &lt;=</li>
-        <li>Lógicos: and, or, not</li>
-    </ul>
+  <h4>Ejemplo en Python:</h4>
+  <pre><code>
+numero = int(input("Ingrese un número:"))
+if numero > 0:
+    print("El número es positivo.")
+else:
+    print("El número es negativo o cero.")
+  </code></pre>
 
-    <h3>Conversión entre Tipos de Datos</h3>
-    <pre><code>
-entrada = "100"
-numero = int(entrada)
+  <h3>📖 Estructuras de Control Iterativas</h3>
+  <p>Las estructuras de control iterativas (como los bucles) repiten un bloque de código mientras se cumpla una condición.</p>
+  
+  <h4>Ejemplo en Psint (Bucle Mientras):</h4>
+  <pre><code>
+Algoritmo ControlIterativo
+    Definir contador Como Entero
+    contador = 1
+    Mientras contador <= 5 Hacer
+        Escribir "Contador: ", contador
+        contador = contador + 1
+    FinMientras
+FinAlgoritmo
+  </code></pre>
 
-cantidad = 200
-texto = str(cantidad)
-    </code></pre>
+  <h4>Ejemplo en Python (Bucle While):</h4>
+  <pre><code>
+contador = 1
+while contador <= 5:
+    print("Contador:", contador)
+    contador += 1
+  </code></pre>
 
-    <h3>Entrada y Salida de Datos</h3>
-    <pre><code>
-nombre = input("Ingrese su nombre: ")
-print("Bienvenido,", nombre)
-    </code></pre>
+  <h2>2️⃣ Video de Apoyo</h2>
+  <p><a href="https://www.youtube.com/playlist?list=PLZmtYtnx3IcUR9P1pZ7VOWlzvizYB6EF-" target="_blank">▶️ Ver lista de reproducción - PSeInt</a></p>
 
-    <h2>Resumen de la Clase</h2>
-    <ul>
-        <li>Variables y constantes controlan los datos en los programas.</li>
-        <li>Conversión de tipos es fundamental para interactuar con usuarios.</li>
-        <li>Entrada y salida permiten comunicación entre el programa y el usuario.</li>
-    </ul>
+  <h2>📚 Referencias Bibliográficas (APA 7)</h2>
+  <ul>
+    <li>PSeInt Developers. (s.f.). <em>Pseudo Intérprete PSeInt</em>. Recuperado de <a href="https://sourceforge.net/projects/pseint/" target="_blank">https://sourceforge.net/projects/pseint/</a></li>
+    <li>FreeCodeCamp Español. (2021). <em>Curso básico de PSeInt</em> [Video]. Recuperado de <a href="https://www.youtube.com/playlist?list=PLZmtYtnx3IcUR9P1pZ7VOWlzvizYB6EF-" target="_blank">https://www.youtube.com/playlist?list=PLZmtYtnx3IcUR9P1pZ7VOWlzvizYB6EF-</a></li>
+  </ul>
 
-    <footer>
-        <p>Universidad de Guayaquil - Facultad de Ingeniería Industrial</p>
-    </footer>
+  <footer style="text-align:center; margin-top:40px;">
+    <p>Universidad de Guayaquil - Facultad de Ingeniería Industrial</p>
+  </footer>
+
 </body>
 </html>
