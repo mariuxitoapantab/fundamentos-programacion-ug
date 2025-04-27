@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Clase 6 - Operaciones, Estadísticas, Ordenamiento y Broadcasting</title>
+</head>
+<body>
+    <h1>Clase 6 - Operaciones, Estadísticas, Ordenamiento y Broadcasting</h1>
+
+    <h2>Objetivos de Aprendizaje</h2>
+    <ul>
+        <li>Realizar operaciones aritméticas básicas en listas.</li>
+        <li>Calcular estadísticas simples: suma, promedio, mínimo, máximo.</li>
+        <li>Ordenar listas de manera ascendente y descendente.</li>
+        <li>Introducir el concepto de Broadcasting en listas y arreglos.</li>
+    </ul>
+
+    <h2>Contenido</h2>
+
+    <h3>Operaciones Aritméticas Básicas</h3>
+    <pre><code>
+produccion_turno1 = [100, 120, 130]
+produccion_turno2 = [110, 125, 135]
+
+produccion_total = []
+for i in range(len(produccion_turno1)):
+    produccion_total.append(produccion_turno1[i] + produccion_turno2[i])
+
+print(produccion_total)
+    </code></pre>
+
+    <h3>Estadísticas Básicas</h3>
+    <pre><code>
+produccion = [100, 120, 130]
+
+print(sum(produccion))  # Suma
+print(sum(produccion) / len(produccion))  # Promedio
+print(min(produccion))  # Mínimo
+print(max(produccion))  # Máximo
+    </code></pre>
+
+    <h3>Ordenamiento</h3>
+    <pre><code>
+produccion.sort()          # Orden ascendente
+produccion.sort(reverse=True)  # Orden descendente
+print(produccion)
+    </code></pre>
+
+    <h3>Broadcasting Simulado en Listas</h3>
+    <p>Usamos comprensión de listas para aplicar operaciones a todos los elementos.</p>
+    <pre><code>
+produccion = [100, 120, 130]
+produccion_incrementada = [p * 1.10 for p in produccion]
+print(produccion_incrementada)
+    </code></pre>
+
+    <h3>Broadcasting Real en Arreglos (NumPy)</h3>
+    <pre><code>
+import numpy as np
+
+produccion = np.array([100, 120, 130])
+produccion_incrementada = produccion + 10
+print(produccion_incrementada)
+    </code></pre>
+
+    <h2>Resumen de la Clase</h2>
+    <ul>
+        <li>Se pueden hacer operaciones aritméticas básicas sobre listas.</li>
+        <li>Se pueden calcular estadísticas simples rápidamente.</li>
+        <li>Broadcasting permite aplicar operaciones masivas de forma elegante y eficiente.</li>
+    </ul>
+
+    <footer>
+        <p>Universidad de Guayaquil - Facultad de Ingeniería Industrial</p>
+    </footer>
+</body>
+</html>
