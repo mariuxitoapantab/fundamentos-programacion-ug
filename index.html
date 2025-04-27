@@ -2,154 +2,21 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fundamentos de Programación - Universidad de Guayaquil</title>
-    <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #F5F5F5; color: #333; }
-        header { background: #003DA5; color: white; padding: 1em 0; text-align: center; }
-        nav { background: #ffffff; padding: 1em; text-align: center; }
-        nav a { margin: 0 10px; color: #003DA5; text-decoration: none; font-weight: bold; }
-        section { padding: 2em; background: #ffffff; margin: 1em auto; width: 90%; max-width: 1000px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-        h2 { color: #003DA5; }
-        .ejercicio { background: #F0F8FF; padding: 1em; border-radius: 5px; margin-top: 1em; }
-        .boton { display: inline-block; margin-top: 1em; background: #003DA5; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; }
-        .respuesta { display: none; background: #d9edf7; padding: 10px; margin-top: 10px; border-radius: 5px; }
-        footer { text-align: center; padding: 1em; font-size: 0.9em; color: #666; }
-    </style>
-    <script>
-        function mostrarRespuesta(id) {
-            var respuesta = document.getElementById(id);
-            if (respuesta.style.display === "none") {
-                respuesta.style.display = "block";
-            } else {
-                respuesta.style.display = "none";
-            }
-        }
-    </script>
 </head>
-
 <body>
-<header>
-    <h1>Fundamentos de Programación</h1>
-    <p>Facultad de Ingeniería Industrial - Universidad de Guayaquil</p>
-</header>
-
-<nav>
-    <a href="#clase1">Clase 1</a>
-    <a href="#clase2">Clase 2</a>
-    <a href="#clase3">Clase 3</a>
-    <a href="#clase4">Clase 4</a>
-    <a href="#clase5">Clase 5</a>
-    <a href="#clase6">Clase 6</a>
-    <a href="#clase7">Clase 7</a>
-</nav>
-
-<section id="clase1">
-    <h2>Clase 1: Interpretadores y compiladores</h2>
-    <p>Ambientes de programación. Conceptos y propiedades de los algoritmos.</p>
-    <a href="https://www.online-python.com/" class="boton" target="_blank">Abrir Python Online</a>
-    <div class="ejercicio">
-        <strong>Ejercicio:</strong> Crear un algoritmo en Psint que calcule la eficiencia de una máquina de producción (output/input).
-        <button onclick="mostrarRespuesta('r1')">Mostrar solución</button>
-        <div id="r1" class="respuesta">
-            <code>eficiencia = (output / input) * 100</code>
-        </div>
-    </div>
-</section>
-
-<section id="clase2">
-    <h2>Clase 2: Variables y tipos de datos</h2>
-    <p>Operadores lógicos y relacionales. Conversiones de tipos. Entrada y salida.</p>
-    <a href="https://replit.com/languages/python3" class="boton" target="_blank">Abrir Replit</a>
-    <div class="ejercicio">
-        <strong>Ejercicio:</strong> Crear un programa que determine si la producción diaria supera un mínimo de 500 unidades.
-        <button onclick="mostrarRespuesta('r2')">Mostrar solución</button>
-        <div id="r2" class="respuesta">
-            <code>if produccion &gt;= 500:
-    print("Producción aceptable")
-else:
-    print("Producción insuficiente")</code>
-        </div>
-    </div>
-</section>
-
-<section id="clase3">
-    <h2>Clase 3: Estructuras de control</h2>
-    <p>Condicionales, iterativas y sentencias anidadas.</p>
-    <a href="https://www.programiz.com/python-programming/online-compiler/" class="boton" target="_blank">Abrir Programiz</a>
-    <div class="ejercicio">
-        <strong>Ejercicio:</strong> Crear un programa que calcule el turno de producción según la hora de entrada (mañana, tarde, noche).
-        <button onclick="mostrarRespuesta('r3')">Mostrar solución</button>
-        <div id="r3" class="respuesta">
-            <code>if hora &lt; 12:
-    print("Turno Mañana")
-elif hora &lt; 18:
-    print("Turno Tarde")
-else:
-    print("Turno Noche")</code>
-        </div>
-    </div>
-</section>
-
-<section id="clase4">
-    <h2>Clase 4: Listas</h2>
-    <p>Propiedades, operaciones, indexación y manejo de caracteres como listas.</p>
-    <a href="https://onecompiler.com/python" class="boton" target="_blank">Abrir OneCompiler</a>
-    <div class="ejercicio">
-        <strong>Ejercicio:</strong> Almacenar en una lista el inventario semanal de repuestos industriales.
-        <button onclick="mostrarRespuesta('r4')">Mostrar solución</button>
-        <div id="r4" class="respuesta">
-            <code>inventario = ["tuercas", "pernos", "engranajes", "correas"]</code>
-        </div>
-    </div>
-</section>
-
-<section id="clase5">
-    <h2>Clase 5: Arreglos</h2>
-    <p>Propiedades, operaciones, indexación y slicing de arreglos.</p>
-    <a href="https://www.jdoodle.com/python-programming-online/" class="boton" target="_blank">Abrir JDoodle</a>
-    <div class="ejercicio">
-        <strong>Ejercicio:</strong> Calcular el total de costos de producción a partir de un arreglo de costos unitarios.
-        <button onclick="mostrarRespuesta('r5')">Mostrar solución</button>
-        <div id="r5" class="respuesta">
-            <code>costos = [10, 20, 15, 12]
-print(sum(costos))</code>
-        </div>
-    </div>
-</section>
-
-<section id="clase6">
-    <h2>Clase 6: Operaciones avanzadas</h2>
-    <p>Operaciones aritméticas, estadísticas, ordenamiento y broadcasting.</p>
-    <a href="https://trinket.io/embed/python3/a5bd54189b" class="boton" target="_blank">Abrir Trinket</a>
-    <div class="ejercicio">
-        <strong>Ejercicio:</strong> Ordenar un listado de tiempos de producción de menor a mayor.
-        <button onclick="mostrarRespuesta('r6')">Mostrar solución</button>
-        <div id="r6" class="respuesta">
-            <code>tiempos = [45, 30, 50, 40]
-tiemp_ordenados = sorted(tiempos)
-print(tiemp_ordenados)</code>
-        </div>
-    </div>
-</section>
-
-<section id="clase7">
-    <h2>Clase 7: Lección de la Unidad 2</h2>
-    <p>Evaluación práctica de conceptos de listas y arreglos aplicados a problemas industriales.</p>
-    <div class="ejercicio">
-        <strong>Ejercicio:</strong> Crear un programa que calcule el stock promedio de productos en inventario.
-        <button onclick="mostrarRespuesta('r7')">Mostrar solución</button>
-        <div id="r7" class="respuesta">
-            <code>stock = [100, 150, 130, 120]
-promedio = sum(stock) / len(stock)
-print(promedio)</code>
-        </div>
-    </div>
-</section>
-
-<footer>
-    Universidad de Guayaquil - Facultad de Ingeniería Industrial - 2025
-</footer>
-
+    <h1>Bienvenido al Curso de Fundamentos de Programación</h1>
+    <p>Universidad de Guayaquil - Facultad de Ingeniería Industrial</p>
+    <h2>Clases Disponibles</h2>
+    <ul>
+        <li><a href="clases/clase1.html">Clase 1 - Interpretadores, Compiladores y Algoritmos</a></li>
+        <li><a href="clases/clase2.html">Clase 2 - Variables, Constantes y Tipos de Datos</a></li>
+        <li><a href="clases/clase3.html">Clase 3 - Condicionales, Switch, Iterativas</a></li>
+        <li><a href="clases/clase4.html">Clase 4 - Listas: Propiedades y Operaciones</a></li>
+        <li><a href="clases/clase5.html">Clase 5 - Arreglos: Operaciones y Indexación</a></li>
+        <li><a href="clases/clase6.html">Clase 6 - Operaciones, Estadísticas y Broadcasting</a></li>
+        <li><a href="clases/clase7.html">Clase 7 - Repaso General y Lección Unidad 2</a></li>
+    </ul>
+    <p>Desarrollado en colaboración con el equipo docente.</p>
 </body>
 </html>
