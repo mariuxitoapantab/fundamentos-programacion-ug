@@ -1,85 +1,213 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Clase 3 - Condicionales, Switch, Iterativas</title>
-    <link rel="stylesheet" href="../css/estilos.css">
+  <meta charset="UTF-8">
+  <title>Clase 3 - Estructuras de Control Condicionales, Switch, Iterativas, Break, Continue y Pass</title>
+  <link rel="stylesheet" href="../css/estilos.css">
 </head>
 <body>
-    <h1>Clase 3 - Condicionales, Switch, Iterativas</h1>
 
-    <h2>Objetivos de Aprendizaje</h2>
-    <ul>
-        <li>Aplicar estructuras condicionales (`if`, `if-else`, `if-elif-else`).</li>
-        <li>Implementar el control múltiple usando `match-case` (switch).</li>
-        <li>Utilizar estructuras iterativas (`for`, `while`).</li>
-        <li>Manejar instrucciones especiales: `break`, `continue`, `pass`.</li>
-    </ul>
+  <h1>Clase 3 - Estructuras de Control Condicionales, Switch, Iterativas, Break, Continue y Pass</h1>
+  <p><strong>Fecha:</strong> 21-abr-2025</p>
+  <p><strong>Modalidad:</strong> Virtual</p>
+  <p><strong>Herramienta:</strong> Python Online</p>
+  <p><strong>➡️ Abrir Editor Online Python</strong></p>
+  <p><strong>✅ Link verificado:</strong> <a href="https://www.programiz.com/python-programming/online-compiler/" target="_blank">Funciona perfectamente</a>.</p>
 
-    <h2>Introducción</h2>
-    <p><strong>Nota:</strong> En esta clase también se aplica la <strong>Lección de la Unidad 1</strong> correspondiente a los contenidos desarrollados en las clases anteriores.</p>
+  <h2>🎯 Objetivos de Aprendizaje</h2>
+  <ul>
+    <li>Aplicar condicionales (if, if-else, if-elif-else) y control múltiple (match-case).</li>
+    <li>Implementar bucles (for, while) y manejar break, continue, pass.</li>
+    <li>Resolver problemas aplicados a contextos industriales usando Python.</li>
+  </ul>
 
-    <h2>Contenido</h2>
+  <h2>1️⃣ Contenido Académico</h2>
 
-    <h3>Estructuras Condicionales</h3>
-    <pre><code>
-temperatura = 30
+  <h3>📖 Condicionales en Python</h3>
 
-if temperatura > 25:
-    print("Activar ventilación industrial")
+  <h4>🔹 if simple</h4>
+  <pre><code>
+temperatura = 32
+
+if temperatura > 30:
+    print("Encender ventiladores industriales.")
+  </code></pre>
+
+  <h4>🔹 if-else</h4>
+  <pre><code>
+stock_actual = 45
+stock_minimo = 50
+
+if stock_actual >= stock_minimo:
+    print("Stock suficiente.")
 else:
-    print("Sistema normal")
-    </code></pre>
+    print("Solicitar reposición de inventario.")
+  </code></pre>
 
-    <h3>Switch con match-case (Python 3.10+)</h3>
-    <pre><code>
-opcion = int(input("Seleccione opción (1-3): "))
+  <h4>🔹 if-elif-else</h4>
+  <pre><code>
+eficiencia = 78
+
+if eficiencia >= 90:
+    print("Excelente desempeño.")
+elif eficiencia >= 75:
+    print("Desempeño aceptable.")
+else:
+    print("Desempeño bajo, requiere mejora.")
+  </code></pre>
+
+  <h3>📖 Switch - match-case en Python 3.10+</h3>
+  <p>Python implementa switch mediante <code>match-case</code>, más organizado que muchos <code>if-elif-else</code> seguidos.</p>
+  <h4>🔹 Ejemplo:</h4>
+  <pre><code>
+opcion = int(input("Seleccione opción (1-Registrar, 2-Reportes, 3-Salir): "))
 
 match opcion:
     case 1:
-        print("Registrar producción")
+        print("Registrando producción...")
     case 2:
-        print("Consultar inventario")
+        print("Mostrando reportes...")
     case 3:
-        print("Salir del sistema")
+        print("Saliendo del sistema...")
     case _:
-        print("Opción inválida")
-    </code></pre>
+        print("Opción inválida.")
+  </code></pre>
+  <p><strong>🎯 Nota:</strong> Solo disponible en Python 3.10+.</p>
 
-    <h3>Estructuras Iterativas</h3>
-    <pre><code>
-for i in range(5):
-    print("Operario número:", i+1)
+  <h3>📖 Estructuras Iterativas</h3>
 
-contador = 0
-while contador < 5:
-    print("Mantenimiento máquina:", contador+1)
+  <h4>🔹 while</h4>
+  <pre><code>
+contador = 1
+while contador <= 5:
+    print("Producto inspeccionado:", contador)
     contador += 1
-    </code></pre>
+  </code></pre>
 
-    <h3>Instrucciones break, continue y pass</h3>
-    <pre><code>
-for pieza in range(1, 6):
-    if pieza == 4:
+  <h4>🔹 for</h4>
+  <pre><code>
+for operario in range(1, 6):
+    print("Asignar turno a operario:", operario)
+  </code></pre>
+
+  <h3>📖 Sentencias Anidadas</h3>
+  <p>Usar un <code>if</code> dentro de otro <code>if</code>.</p>
+  <pre><code>
+temperatura = int(input("Ingrese temperatura: "))
+
+if temperatura > 30:
+    if temperatura > 40:
+        print("Alerta: sobrecalentamiento")
+    else:
+        print("Precaución: temperatura alta")
+else:
+    print("Temperatura normal")
+  </code></pre>
+
+  <h3>📖 Break, Continue y Pass</h3>
+  <h4>🔹 break: Finaliza el bucle inmediatamente.</h4>
+  <pre><code>
+for pieza in range(1, 10):
+    if pieza == 5:
         break
     print("Pieza procesada:", pieza)
+  </code></pre>
 
+  <h4>🔹 continue: Salta el resto de instrucciones del ciclo.</h4>
+  <pre><code>
 for pieza in range(1, 6):
-    if pieza == 2:
+    if pieza == 3:
         continue
-    print("Pieza verificada:", pieza)
-    </code></pre>
+    print("Pieza:", pieza)
+  </code></pre>
 
-    <h2>Resumen de la Clase</h2>
-    <ul>
-        <li>Control del flujo de ejecución usando condicionales e iteraciones.</li>
-        <li>Implementación eficiente con `match-case` en Python 3.10+.</li>
-        <li>Optimización de ciclos con `break`, `continue` y `pass`.</li>
-    </ul>
+  <h4>🔹 pass: Deja un bloque vacío sin errores.</h4>
+  <pre><code>
+for i in range(5):
+    pass  # Se completará más tarde
+  </code></pre>
 
-    <footer>
-        <p>Universidad de Guayaquil - Facultad de Ingeniería Industrial</p>
-    </footer>
+  <h3>📷 Diagramas de apoyo</h3>
+  <h4>✅ Links verificados:</h4>
+  <h5>• If-Else</h5>
+  <div style="text-align:center;">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/If-then-else-flowchart.svg/800px-If-then-else-flowchart.svg.png" width="600">
+  </div>
+  <h5>• While</h5>
+  <div style="text-align:center;">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/f/fd/While-loop-flowchart.svg" width="600">
+  </div>
+
+  <h2>🧪 APE - Actividad Práctica Experimental (en clase)</h2>
+  <h4>🔹 Actividad:</h4>
+  <p>Desarrollar el siguiente programa en Online Python.</p>
+  <p><strong>Problema:</strong> Clasificar operarios según la producción semanal:</p>
+  <ul>
+    <li>Más de 100 ➔ "Alto rendimiento"</li>
+    <li>Entre 60 y 100 ➔ "Rendimiento medio"</li>
+    <li>Menos de 60 ➔ "Bajo rendimiento"</li>
+  </ul>
+  <h4>Código base:</h4>
+  <pre><code>
+produccion = int(input("Ingrese producción semanal: "))
+
+if produccion > 100:
+    print("Alto rendimiento")
+elif produccion >= 60:
+    print("Rendimiento medio")
+else:
+    print("Bajo rendimiento")
+  </code></pre>
+  <p>Guardar el código en el editor y compartir el link.</p>
+
+  <h2>📝 AA - Actividad Autónoma (para casa)</h2>
+  <h4>🔹 Actividad:</h4>
+  <p>Crear un programa que decida si detener una máquina basándose en:</p>
+  <ul>
+    <li>Horas de funcionamiento > 8</li>
+    <li>Temperatura > 70°C</li>
+  </ul>
+  <p>Luego, identificar qué tipo de máquina está operando usando <code>match-case</code>.</p>
+  <h4>Código sugerido:</h4>
+  <pre><code>
+horas = int(input("Ingrese horas de funcionamiento: "))
+temperatura = int(input("Ingrese temperatura: "))
+
+if horas > 8 or temperatura > 70:
+    print("Detener máquina para mantenimiento")
+else:
+    print("Operación normal")
+
+tipo_maquina = int(input("Tipo de máquina (1-Motor, 2-Generador, 3-Compresor): "))
+
+match tipo_maquina:
+    case 1:
+        print("Motor seleccionado")
+    case 2:
+        print("Generador seleccionado")
+    case 3:
+        print("Compresor seleccionado")
+    case _:
+        print("Tipo desconocido")
+  </code></pre>
+  <p>Subir link del programa a Moodle.</p>
+
+  <h2>🎬 Video de Apoyo</h2>
+  <p><a href="https://www.youtube.com/playlist?list=PLZmtYtnx3IcUR9P1pZ7VOWlzvizYB6EF-" target="_blank">▶️ Ver lista de reproducción - PSeInt</a></p>
+
+  <h2>✅ Resumen de la Clase 3</h2>
+  <ul>
+    <li>Condicionales y control de flujo con if, if-elif-else, match-case.</li>
+    <li>Bucle for y while para iteraciones controladas.</li>
+    <li>Uso de break, continue y pass para manipular bucles.</li>
+    <li>Aplicación práctica en escenarios industriales.</li>
+  </ul>
+
+  <footer style="text-align:center; margin-top:40px;">
+    <p>Universidad de Guayaquil - Facultad de Ingeniería Industrial</p>
+  </footer>
+
 </body>
 </html>
+
 
