@@ -1,25 +1,34 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Clase 6 - Operaciones, Estadísticas, Ordenamiento y Broadcasting</title>
-    <link rel="stylesheet" href="../css/estilos.css">
+  <meta charset="UTF-8">
+  <title>Clase 6 – Operaciones Aritméticas, Estadísticas y de Ordenamiento en Arreglos. Broadcasting</title>
+  <link rel="stylesheet" href="../css/estilos.css">
 </head>
 <body>
-    <h1>Clase 6 - Operaciones, Estadísticas, Ordenamiento y Broadcasting</h1>
 
-    <h2>Objetivos de Aprendizaje</h2>
-    <ul>
-        <li>Realizar operaciones aritméticas básicas en listas.</li>
-        <li>Calcular estadísticas simples: suma, promedio, mínimo, máximo.</li>
-        <li>Ordenar listas de manera ascendente y descendente.</li>
-        <li>Introducir el concepto de Broadcasting en listas y arreglos.</li>
-    </ul>
+  <h1>Clase 6 – Operaciones Aritméticas, Estadísticas y de Ordenamiento en Arreglos. Broadcasting</h1>
+  <p><strong>Fecha:</strong> 12-may-2025</p>
+  <p><strong>Modalidad:</strong> Virtual</p>
+  <p><strong>Herramienta:</strong> Python Online</p>
+  <p><strong>➡️ Abrir Editor Online Python </strong><a href="https://www.online-python.com/" target="_blank">Online Python</a></p>
+  <p><strong>➡️ Abrir Editor Online Python </strong><a href="https://www.programiz.com/python-programming/online-compiler/" target="_blank">Programiz Online Python Compiler (Interpreter)</a></p>
 
-    <h2>Contenido</h2>
+  <h2>📋 Objetivos de Aprendizaje</h2>
+  <ul>
+    <li>Realizar operaciones aritméticas básicas entre elementos de listas y arreglos.</li>
+    <li>Calcular medidas estadísticas simples (suma, promedio, mínimo, máximo).</li>
+    <li>Aplicar técnicas de ordenamiento de datos.</li>
+    <li>Comprender el concepto de Broadcasting en listas y arreglos reales.</li>
+    <li>Resolver problemas industriales mediante operaciones vectorizadas.</li>
+  </ul>
 
-    <h3>Operaciones Aritméticas Básicas</h3>
-    <pre><code>
+  <h2>1️⃣ Contenido Académico</h2>
+
+  <h3>📖 Operaciones Aritméticas con Listas en Python</h3>
+  <p>Las operaciones aritméticas se pueden realizar entre los elementos de las listas de Python, como la suma de elementos correspondientes en diferentes listas.</p>
+  <h4>🔹 Ejemplo:</h4>
+  <pre><code>
 produccion_turno1 = [100, 120, 130]
 produccion_turno2 = [110, 125, 135]
 
@@ -27,52 +36,161 @@ produccion_total = []
 for i in range(len(produccion_turno1)):
     produccion_total.append(produccion_turno1[i] + produccion_turno2[i])
 
-print(produccion_total)
-    </code></pre>
+print("Producción total por producto:", produccion_total)
+  </code></pre>
 
-    <h3>Estadísticas Básicas</h3>
-    <pre><code>
+  <h3>📖 Operaciones Estadísticas Simples</h3>
+  <p>Se pueden calcular estadísticas básicas como la suma, promedio, mínimo y máximo de una lista.</p>
+  <h4>🔹 Ejemplo:</h4>
+  <pre><code>
 produccion = [100, 120, 130]
 
 print(sum(produccion))  # Suma
 print(sum(produccion) / len(produccion))  # Promedio
 print(min(produccion))  # Mínimo
 print(max(produccion))  # Máximo
-    </code></pre>
+  </code></pre>
 
-    <h3>Ordenamiento</h3>
-    <pre><code>
-produccion.sort()          # Orden ascendente
-produccion.sort(reverse=True)  # Orden descendente
+  <h3>📖 Ordenamiento de Listas</h3>
+  <p>El ordenamiento de listas es útil para organizar datos y facilitar su análisis.</p>
+  <h4>🔹 Orden ascendente y descendente:</h4>
+  <pre><code>
+produccion.sort()           # Ascendente
+produccion.sort(reverse=True)  # Descendente
 print(produccion)
-    </code></pre>
+  </code></pre>
 
-    <h3>Broadcasting Simulado en Listas</h3>
-    <p>Usamos comprensión de listas para aplicar operaciones a todos los elementos.</p>
-    <pre><code>
+  <h3>📖 Broadcasting</h3>
+  <p>El concepto de <strong>Broadcasting</strong> permite realizar operaciones en arreglos de manera eficiente, sin necesidad de recorrerlos manualmente.</p>
+  
+  <h4>🔵 Broadcasting Simulado en Listas (Comprensión de Listas)</h4>
+  <p>En Python nativo, no existe Broadcasting automático, pero podemos simularlo aplicando operaciones a todos los elementos mediante comprensión de listas.</p>
+  <h4>🔹 Ejemplo:</h4>
+  <pre><code>
 produccion = [100, 120, 130]
+
+# Aumentar producción en 10%
 produccion_incrementada = [p * 1.10 for p in produccion]
-print(produccion_incrementada)
-    </code></pre>
+print("Producción incrementada:", produccion_incrementada)
+  </code></pre>
 
-    <h3>Broadcasting Real en Arreglos (NumPy)</h3>
-    <pre><code>
+  <h4>🟢 Broadcasting Real en Arreglos con NumPy</h4>
+  <p>NumPy permite aplicar operaciones directamente sobre arreglos sin necesidad de recorrerlos manualmente.</p>
+  <h4>🔹 Importar NumPy:</h4>
+  <pre><code>
 import numpy as np
+  </code></pre>
 
+  <h4>🔹 Ejemplo 1: Sumar valor constante</h4>
+  <pre><code>
 produccion = np.array([100, 120, 130])
+
 produccion_incrementada = produccion + 10
-print(produccion_incrementada)
-    </code></pre>
+print(produccion_incrementada)  # [110 130 140]
+  </code></pre>
 
-    <h2>Resumen de la Clase</h2>
-    <ul>
-        <li>Se pueden hacer operaciones aritméticas básicas sobre listas.</li>
-        <li>Se pueden calcular estadísticas simples rápidamente.</li>
-        <li>Broadcasting permite aplicar operaciones masivas de forma elegante y eficiente.</li>
-    </ul>
+  <h4>🔹 Ejemplo 2: Multiplicar todos los valores</h4>
+  <pre><code>
+precios = np.array([200, 350, 400, 150])
 
-    <footer>
-        <p>Universidad de Guayaquil - Facultad de Ingeniería Industrial</p>
-    </footer>
+precios_aumentados = precios * 1.05
+print(precios_aumentados)
+  </code></pre>
+
+  <h4>🔹 Ejemplo 3: Resta de arreglos</h4>
+  <pre><code>
+linea1 = np.array([100, 120, 140])
+linea2 = np.array([90, 110, 130])
+
+diferencia = linea1 - linea2
+print(diferencia)  # [10 10 10]
+  </code></pre>
+
+  <h3>📌 Resumen: Diferencia entre Simulación y Broadcasting Real</h3>
+  <table border="1" cellpadding="8" cellspacing="0" align="center">
+    <thead>
+      <tr>
+        <th>Aspecto</th>
+        <th>Listas básicas</th>
+        <th>Arreglos NumPy</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Código</td>
+        <td>Compresión de listas</td>
+        <td>Operación directa</td>
+      </tr>
+      <tr>
+        <td>Velocidad</td>
+        <td>Moderada</td>
+        <td>Alta (optimizaciones internas)</td>
+      </tr>
+      <tr>
+        <td>Requiere librería externa</td>
+        <td>No</td>
+        <td>Sí (NumPy)</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>📷 Imagen de Apoyo: Concepto de Ordenamiento</h3>
+  <div style="text-align:center;">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Insertion-sort-example-300px.gif/600px-Insertion-sort-example-300px.gif" alt="Ordenamiento de listas" width="600">
+  </div>
+
+  <h2>🧪 APE - Actividad Práctica Experimental (en clase)</h2>
+  <h4>🔹 Actividad:</h4>
+  <p>Gestionar producción de 5 líneas de manufactura.</p>
+  <h4>Código Base:</h4>
+  <pre><code>
+produccion = [120, 110, 130, 100, 115]
+
+produccion_total = sum(produccion)
+promedio = produccion_total / len(produccion)
+
+print("Producción total:", produccion_total)
+print("Promedio:", promedio)
+
+produccion.sort()
+print("Producción ordenada:", produccion)
+  </code></pre>
+
+  <h2>📝 AA - Actividad Autónoma (para casa)</h2>
+  <h4>🔹 Actividad:</h4>
+  <p>Incrementar eficiencias usando Broadcasting (simulado).</p>
+  <h4>Código sugerido:</h4>
+  <pre><code>
+eficiencias = [78, 82, 88, 91, 76]
+
+eficiencias_mejoradas = [ef * 1.05 for ef in eficiencias]
+
+print("Eficiencias mejoradas:", eficiencias_mejoradas)
+  </code></pre>
+  <p>Subir el link en Moodle.</p>
+
+  <h2>🎬 Video de Apoyo</h2>
+  <p><a href="https://www.youtube.com/watch?v=8ext9G7xspg" target="_blank">▶️ Ver video - Python List Comprehensions and Sorting (español)</a></p>
+
+  <h2>✅ Resumen de la Clase 6</h2>
+  <ul>
+    <li>Las listas permiten operaciones básicas manuales o simuladas por comprensión.</li>
+    <li>NumPy facilita Broadcasting real, optimizando cálculos masivos.</li>
+    <li>Ordenamiento es esencial para análisis de producción y eficiencia.</li>
+    <li>Conocimiento clave para cursos futuros en Ciencia de Datos, AI, Industria 4.0.</li>
+  </ul>
+
+  <h2>📚 Referencias Bibliográficas (APA 7)</h2>
+  <ul>
+    <li>Wikipedia contributors. (s.f.). <em>Sorting algorithm</em>. Wikipedia. Recuperado el 26 de abril de 2025, de <a href="https://upload.wikimedia.org/wikipedia/commons/7/7e/Insertion-sort-example-300px.gif" target="_blank">https://upload.wikimedia.org/wikipedia/commons/7/7e/Insertion-sort-example-300px.gif</a></li>
+    <li>FreeCodeCamp Español. (2021). <em>Python List Comprehensions and Sorting</em> [Video]. YouTube. Recuperado de <a href="https://www.youtube.com/watch?v=8ext9G7xspg" target="_blank">https://www.youtube.com/watch?v=8ext9G7xspg</a></li>
+    <li>NumPy Developers. (2025). <em>NumPy Documentation: Broadcasting</em>. Recuperado de <a href="https://numpy.org/doc/stable/user/basics.broadcasting.html" target="_blank">https://numpy.org/doc/stable/user/basics.broadcasting.html</a></li>
+  </ul>
+
+
+  <footer style="text-align:center; margin-top:40px;">
+    <p>Universidad de Guayaquil - Facultad de Ingeniería Industrial</p>
+  </footer>
+
 </body>
 </html>
