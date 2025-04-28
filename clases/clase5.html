@@ -26,9 +26,58 @@
   <h2>1️⃣ Contenido Académico</h2>
 
   <h3>📖 ¿Qué es un Arreglo en Python?</h3>
-  <p>En Python puro, las listas se comportan como arreglos dinámicos. Un arreglo tradicional, como en otros lenguajes (C, Java), es una estructura ordenada de elementos del mismo tipo.</p>
+  <p>En Python puro, las listas se comportan como arreglos dinámicos. Un arreglo tradicional, como en otros lenguajes (C, Java), es una estructura ordenada de elementos del mismo tipo de dato.</p>
+  <p>Aunque en cursos avanzados se utiliza NumPy para trabajar con arreglos reales, en este nivel utilizaremos listas nativas de Python como "arreglos".</p>
   <p>En programación científica o industrial se recomienda usar **NumPy** para arreglos más eficientes, pero en este curso inicial trabajaremos listas como arreglos.</p>
 
+  <h3>📖 Diferencia entre Lista y Arreglo</h3>
+  <table border="1" cellpadding="8" cellspacing="0" align="center">
+    <thead>
+      <tr>
+        <th>Característica</th>
+        <th>Lista (list)</th>
+        <th>Arreglo (array, usando NumPy)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Tipo de datos</td>
+        <td>Heterogéneos (mezclados)</td>
+        <td>Homogéneos (todos del mismo tipo)</td>
+      </tr>
+      <tr>
+        <td>Librería necesaria</td>
+        <td>No (nativo en Python)</td>
+        <td>Sí (requiere instalar numpy)</td>
+      </tr>
+      <tr>
+        <td>Velocidad</td>
+        <td>Menor (para cálculos masivos)</td>
+        <td>Mucho más rápido en procesamiento numérico</td>
+      </tr>
+      <tr>
+        <td>Ejemplo</td>
+        <td>[1, "válvula", 3.5, True]</td>
+        <td>array([1, 2, 3, 4])</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <h4>🔹 Ejemplo de Lista:</h4>
+  <pre><code>
+    mi_lista = [1, "motor", 3.5, True]
+  </code></pre>
+
+  <h4>🔹 Ejemplo de Arreglo NumPy:</h4>
+  <pre><code>
+    import numpy as np
+    mi_arreglo = np.array([1, 2, 3, 4])
+  </code></pre>
+
+  <h3>📌 Importante en Fundamentos:</h3>
+  <p>Para resolver problemas industriales iniciales, usaremos listas de Python como estructuras tipo arreglo.<p>
+  <p>En cursos posteriores (como Programación Científica o Análisis de Datos), aprenderán a usar arreglos optimizados con NumPy.</p> 
+  
   <h3>📖 Propiedades de los Arreglos (Listas en Python)</h3>
   <ul>
     <li><strong>Ordenados:</strong> los elementos tienen una posición fija.</li>
