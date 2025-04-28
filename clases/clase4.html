@@ -1,71 +1,197 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Clase 4 - Listas: Propiedades, Operaciones, Indexación y Slicing</title>
-    <link rel="stylesheet" href="../css/estilos.css">
+  <meta charset="UTF-8">
+  <title>Clase 4 – Listas en Python: Propiedades, Operaciones, Indexación, Slicing y Manejo de Caracteres como Listas</title>
+  <link rel="stylesheet" href="../css/estilos.css">
 </head>
 <body>
-    <h1>Clase 4 - Listas: Propiedades, Operaciones, Indexación y Slicing</h1>
 
-    <h2>Objetivos de Aprendizaje</h2>
-    <ul>
-        <li>Definir y manipular listas en Python.</li>
-        <li>Aplicar operaciones básicas: agregar, eliminar, buscar, modificar.</li>
-        <li>Utilizar técnicas de indexación positiva y negativa.</li>
-        <li>Aplicar slicing para obtener sublistas.</li>
-        <li>Manejar cadenas como listas de caracteres.</li>
-    </ul>
+  <h1>Clase 4 – Listas en Python: Propiedades, Operaciones, Indexación, Slicing y Manejo de Caracteres como Listas</h1>
+  <p><strong>Fecha:</strong> 28-abr-2025</p>
+  <p><strong>Modalidad:</strong> Virtual</p>
+  <p><strong>Herramienta:</strong> Python Online</p>
+  <p><strong>➡️ Abrir Editor Online Python (✅ URL verificada)</strong></p>
+  <p><a href="https://www.programiz.com/python-programming/online-compiler/" target="_blank">Editor Online Python</a></p>
 
-    <h2>Contenido</h2>
+  <h2>🎯 Objetivos de Aprendizaje</h2>
+  <ul>
+    <li>Definir qué es una lista en Python.</li>
+    <li>Aplicar operaciones básicas sobre listas.</li>
+    <li>Comprender el uso de indexación (positiva y negativa) y sublistas (slicing).</li>
+    <li>Manipular cadenas de texto como listas de caracteres.</li>
+    <li>Resolver problemas industriales utilizando listas.</li>
+  </ul>
 
-    <h3>¿Qué es una Lista?</h3>
-    <p>Una <strong>lista</strong> es una colección ordenada, mutable y que puede contener tipos heterogéneos.</p>
-    <pre><code>inventario = ["tornillos", "tuercas", "engranajes"]</code></pre>
+  <h2>1️⃣ Contenido Académico</h2>
 
-    <h3>Operaciones Básicas</h3>
-    <ul>
-        <li>Agregar: <code>inventario.append("correas")</code></li>
-        <li>Eliminar: <code>inventario.remove("tuercas")</code></li>
-        <li>Acceder: <code>print(inventario[0])</code></li>
-        <li>Buscar: <code>"correas" in inventario</code></li>
-    </ul>
+  <h3>📖 ¿Qué es una Lista en Python?</h3>
+  <p>Una lista es una colección ordenada y modificable de elementos en Python. Permite almacenar datos heterogéneos (int, str, float, etc.).</p>
+  <h4>🔹 Ejemplo básico:</h4>
+  <pre><code>
+inventario = ["tornillos", "tuercas", "engranajes"]
+  </code></pre>
 
-    <h3>Indexación de Listas</h3>
-    <p>Índices positivos y negativos permiten acceder a elementos:</p>
-    <pre><code>
+  <h3>📖 Propiedades de las Listas</h3>
+  <ul>
+    <li><strong>Ordenadas:</strong> cada elemento ocupa una posición definida.</li>
+    <li><strong>Mutables:</strong> se pueden modificar sus elementos.</li>
+    <li><strong>Permiten duplicados:</strong> pueden tener elementos repetidos.</li>
+  </ul>
+
+  <h3>📖 Operaciones Básicas en Listas</h3>
+  <h4>🔹 Agregar elementos:</h4>
+  <pre><code>
+inventario.append("correas")
+  </code></pre>
+  <h4>🔹 Eliminar elementos:</h4>
+  <pre><code>
+inventario.remove("tuercas")
+  </code></pre>
+  <h4>🔹 Acceder a elementos:</h4>
+  <pre><code>
+print(inventario[0])  # tornillos
+  </code></pre>
+  <h4>🔹 Buscar elementos:</h4>
+  <pre><code>
+if "correas" in inventario:
+    print("Correas en inventario.")
+  </code></pre>
+  <h4>🔹 Longitud de la lista:</h4>
+  <pre><code>
+print(len(inventario))
+  </code></pre>
+
+  <h3>📖 Indexación en Listas</h3>
+  <p>Cada elemento de una lista tiene un índice que empieza en 0:</p>
+  <table border="1" cellpadding="8" cellspacing="0" align="center">
+    <thead>
+      <tr>
+        <th>Elemento</th>
+        <th>Índice positivo</th>
+        <th>Índice negativo</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>"tornillos"</td>
+        <td>0</td>
+        <td>-3</td>
+      </tr>
+      <tr>
+        <td>"tuercas"</td>
+        <td>1</td>
+        <td>-2</td>
+      </tr>
+      <tr>
+        <td>"engranajes"</td>
+        <td>2</td>
+        <td>-1</td>
+      </tr>
+    </tbody>
+  </table>
+  <h4>¿Qué es Indexación Negativa?</h4>
+  <p>Python permite usar índices negativos para acceder desde el final de la lista. El índice -1 representa el último elemento, -2 el penúltimo, y así sucesivamente.</p>
+  <h4>🔹 Ejemplo:</h4>
+  <pre><code>
 productos = ["motor", "válvula", "sensor"]
+print(productos[-1])  # sensor
+print(productos[-2])  # válvula
+  </code></pre>
 
-print(productos[0])  # motor
-print(productos[-1]) # sensor
-    </code></pre>
+  <h3>📖 Sublistas (Slicing)</h3>
+  <p>Es una técnica para obtener una porción de una lista (una "sublista"). Se utiliza la sintaxis [inicio:fin]. El índice de fin no se incluye.</p>
+  <h4>🔹 Ejemplo:</h4>
+  <pre><code>
+inventario = ["motor", "válvula", "sensor", "bomba"]
 
-    <h3>Sublistas (Slicing)</h3>
-    <p>Permite obtener porciones de listas:</p>
-    <pre><code>
-productos = ["motor", "válvula", "sensor", "bomba"]
+print(inventario[1:3])  # ['válvula', 'sensor']
+print(inventario[:2])   # ['motor', 'válvula']
+print(inventario[2:])   # ['sensor', 'bomba']
+  </code></pre>
+  <h4>🔹 Slicing avanzado (con pasos):</h4>
+  <pre><code>
+print(inventario[::2])  # ['motor', 'sensor']
+  </code></pre>
 
-print(productos[1:3])  # ['válvula', 'sensor']
-print(productos[:2])   # ['motor', 'válvula']
-    </code></pre>
-
-    <h3>Manejo de Cadenas como Listas</h3>
-    <pre><code>
+  <h3>📖 Manejo de Caracteres como Listas</h3>
+  <p>Las cadenas (str) en Python se pueden tratar como listas de caracteres.</p>
+  <h4>🔹 Ejemplo:</h4>
+  <pre><code>
 nombre = "logística"
-
 print(nombre[0])   # l
 print(nombre[2:6]) # gíst
-    </code></pre>
+  </code></pre>
 
-    <h2>Resumen de la Clase</h2>
-    <ul>
-        <li>Las listas permiten organizar y procesar grandes volúmenes de datos.</li>
-        <li>El acceso a elementos se facilita mediante indexación y slicing.</li>
-        <li>Las cadenas también pueden ser manipuladas como listas de caracteres.</li>
-    </ul>
+  <h3>📷 Imagen de Apoyo: Concepto Visual de Listas</h3>
+  <h4>✅ URL verificada:</h4>
+  <div style="text-align:center;">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Python_list_diagram.svg/800px-Python_list_diagram.svg.png" alt="Listas en Python" width="600">
+  </div>
 
-    <footer>
-        <p>Universidad de Guayaquil - Facultad de Ingeniería Industrial</p>
-    </footer>
+  <h2>🧪 APE - Actividad Práctica Experimental (en clase)</h2>
+  <h4>🔹 Actividad:</h4>
+  <p>Crear un inventario en Online Python.</p>
+  <p><strong>Problema:</strong></p>
+  <ul>
+    <li>Crear lista de 5 productos.</li>
+    <li>Mostrar lista.</li>
+    <li>Agregar un producto nuevo.</li>
+    <li>Eliminar un producto antiguo.</li>
+    <li>Mostrar lista actualizada.</li>
+  </ul>
+  <h4>Código Base:</h4>
+  <pre><code>
+inventario = ["tornillos", "tuercas", "engranajes", "rodamientos", "mangueras"]
+
+print("Inventario inicial:", inventario)
+
+inventario.append("correas")
+inventario.remove("mangueras")
+
+print("Inventario actualizado:", inventario)
+  </code></pre>
+  <p>Guardar y compartir link.</p>
+
+  <h2>📝 AA - Actividad Autónoma (para casa)</h2>
+  <h4>🔹 Actividad:</h4>
+  <p>Gestionar eficiencias semanales de máquinas.</p>
+  <p><strong>Problema:</strong></p>
+  <ul>
+    <li>Almacenar las eficiencias.</li>
+    <li>Calcular el promedio.</li>
+    <li>Contar máquinas con eficiencia superior al 80%.</li>
+  </ul>
+  <h4>Código sugerido:</h4>
+  <pre><code>
+eficiencias = [85, 78, 90, 88, 76, 92]
+
+promedio = sum(eficiencias) / len(eficiencias)
+print("Promedio de eficiencia:", promedio)
+
+maquinas_altas = 0
+for eficiencia in eficiencias:
+    if eficiencia > 80:
+        maquinas_altas += 1
+
+print("Máquinas con eficiencia > 80%:", maquinas_altas)
+  </code></pre>
+  <p>Subir el link y subir a Moodle.</p>
+
+  <h2>🎬 Video de Apoyo</h2>
+  <p><a href="https://www.youtube.com/watch?v=W8KRzm-HUcc" target="_blank">▶️ Ver video - Listas en Python para Principiantes (español)</a></p>
+
+  <h2>✅ Resumen de la Clase 4</h2>
+  <ul>
+    <li>Las listas son estructuras dinámicas y ordenadas en Python.</li>
+    <li>Permiten manejo avanzado mediante indexación positiva, negativa y slicing.</li>
+    <li>Las cadenas (str) pueden manipularse como listas.</li>
+    <li>Se aplican listas para organizar inventarios, mediciones y datos industriales.</li>
+  </ul>
+
+  <footer style="text-align:center; margin-top:40px;">
+    <p>Universidad de Guayaquil - Facultad de Ingeniería Industrial</p>
+  </footer>
+
 </body>
 </html>
