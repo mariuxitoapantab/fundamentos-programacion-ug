@@ -1,81 +1,206 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Clase 5 - Arreglos: Propiedades, Operaciones, Indexación y Slicing</title>
-    <link rel="stylesheet" href="../css/estilos.css">
+  <meta charset="UTF-8">
+  <title>Clase 5 – Arreglos en Python: Propiedades, Operaciones, Indexación y Slicing</title>
+  <link rel="stylesheet" href="../css/estilos.css">
 </head>
 <body>
-    <h1>Clase 5 - Arreglos: Propiedades, Operaciones, Indexación y Slicing</h1>
 
-    <h2>Objetivos de Aprendizaje</h2>
-    <ul>
-        <li>Definir arreglos utilizando listas en Python.</li>
-        <li>Realizar operaciones básicas sobre arreglos.</li>
-        <li>Comprender la indexación positiva y negativa.</li>
-        <li>Aplicar slicing para extraer subconjuntos de datos.</li>
-        <li>Distinguir entre listas y arreglos NumPy.</li>
-    </ul>
+  <h1>Clase 5 – Arreglos en Python: Propiedades, Operaciones, Indexación y Slicing</h1>
+  <p><strong>Fecha:</strong> 05-may-2025</p>
+  <p><strong>Modalidad:</strong> Virtual</p>
+  <p><strong>Herramienta:</strong> Python Online</p>
+  <p><strong>➡️ Abrir Editor Online Python </strong><a href="https://www.online-python.com/" target="_blank">Online Python</a></p>
+  <p><strong>➡️ Abrir Editor Online Python </strong><a href="https://www.programiz.com/python-programming/online-compiler/" target="_blank">Programiz Online Python Compiler (Interpreter)</a></p>
 
-    <h2>Contenido</h2>
+  <h2>🎯 Objetivos de Aprendizaje 📌</h2>
+  <ul>
+    <li>Comprender qué es un arreglo en Python.</li>
+    <li>Aplicar operaciones básicas sobre arreglos.</li>
+    <li>Utilizar técnicas de indexación y slicing para manipular datos.</li>
+    <li>Distinguir entre listas estándar y el uso especializado de arreglos.</li>
+    <li>Resolver problemas industriales utilizando estructuras de tipo arreglo.</li>
+  </ul>
 
-    <h3>¿Qué es un Arreglo?</h3>
-    <p>En Python puro, las <strong>listas</strong> funcionan como arreglos dinámicos.  
-    Para operaciones avanzadas y alta eficiencia, se usa <strong>NumPy</strong>.</p>
+  <h2>1️⃣ Contenido Académico</h2>
 
-    <h3>Diferencias entre Lista y Arreglo</h3>
-    <ul>
-        <li><strong>Lista:</strong> permite tipos heterogéneos (mezcla de números, texto, booleanos).</li>
-        <li><strong>Arreglo NumPy:</strong> solo tipos homogéneos (todos números, o todos texto, etc.), más rápido y optimizado.</li>
-    </ul>
+  <h3>📖 ¿Qué es un Arreglo en Python?</h3>
+  <p>En Python puro, las listas se comportan como arreglos dinámicos. Un arreglo tradicional, como en otros lenguajes (C, Java), es una estructura ordenada de elementos del mismo tipo.</p>
+  <p>En programación científica o industrial se recomienda usar **NumPy** para arreglos más eficientes, pero en este curso inicial trabajaremos listas como arreglos.</p>
 
-    <h3>Operaciones Básicas</h3>
-    <pre><code>
-temperaturas = [22, 24, 26, 27, 25]
+  <h3>📖 Propiedades de los Arreglos (Listas en Python)</h3>
+  <ul>
+    <li><strong>Ordenados:</strong> los elementos tienen una posición fija.</li>
+    <li><strong>Indexables:</strong> se puede acceder mediante índices.</li>
+    <li><strong>Mutables:</strong> los elementos pueden ser cambiados.</li>
+    <li><strong>No necesariamente homogéneos:</strong> en listas básicas.</li>
+  </ul>
 
-# Acceso
+  <h3>📖 Operaciones Básicas sobre Arreglos</h3>
+  <h4>🔹 Acceso a elementos:</h4>
+  <pre><code>
 print(temperaturas[2])  # 26
-
-# Modificación
+  </code></pre>
+  
+  <h4>🔹 Modificar elementos:</h4>
+  <pre><code>
 temperaturas[1] = 23
-
-# Agregar elemento
+  </code></pre>
+  
+  <h4>🔹 Agregar elementos:</h4>
+  <pre><code>
 temperaturas.append(28)
+  </code></pre>
+  
+  <h4>🔹 Eliminar elementos:</h4>
+  <pre><code>
+temperaturas.pop(0)  # Elimina el primer elemento
+  </code></pre>
 
-# Eliminar elemento
-temperaturas.pop(0)
-    </code></pre>
+  <h3>📖 Indexación en Arreglos</h3>
+  <p>Los arreglos en Python permiten el acceso mediante índices positivos y negativos.</p>
+  <table border="1" cellpadding="8" cellspacing="0" align="center">
+    <thead>
+      <tr>
+        <th>Elemento</th>
+        <th>Índice positivo</th>
+        <th>Índice negativo</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>22</td>
+        <td>0</td>
+        <td>-5</td>
+      </tr>
+      <tr>
+        <td>24 (modificado a 23)</td>
+        <td>1</td>
+        <td>-4</td>
+      </tr>
+      <tr>
+        <td>26</td>
+        <td>2</td>
+        <td>-3</td>
+      </tr>
+      <tr>
+        <td>27</td>
+        <td>3</td>
+        <td>-2</td>
+      </tr>
+      <tr>
+        <td>25</td>
+        <td>4</td>
+        <td>-1</td>
+      </tr>
+    </tbody>
+  </table>
 
-    <h3>Indexación</h3>
-    <ul>
-        <li>Positiva: de izquierda a derecha (0, 1, 2...)</li>
-        <li>Negativa: de derecha a izquierda (-1, -2, -3...)</li>
-    </ul>
-
-    <h3>Slicing (Subarreglos)</h3>
-    <pre><code>
-# Subconjuntos de datos
+  <h3>📖 Slicing (Subarreglos)</h3>
+  <p>Slicing permite acceder a una sección del arreglo:</p>
+  <h4>🔹 Ejemplos:</h4>
+  <pre><code>
 print(temperaturas[1:4])  # [23, 26, 27]
 print(temperaturas[:3])   # [23, 26, 27]
 print(temperaturas[2:])   # [26, 27, 25]
-    </code></pre>
+  </code></pre>
+  
+  <h4>🔹 Slicing avanzado (con pasos):</h4>
+  <pre><code>
+print(temperaturas[::2])  # [23, 27]
+  </code></pre>
 
-    <h3>Aplicaciones Industriales</h3>
-    <ul>
-        <li>Registro de temperaturas en hornos industriales.</li>
-        <li>Control de producción por turnos.</li>
-        <li>Inventario de repuestos y materiales.</li>
-    </ul>
+  <h3>📖 Aplicaciones Industriales de Arreglos</h3>
+  <ul>
+    <li>Registrar temperaturas diarias de hornos industriales.</li>
+    <li>Almacenar conteos de producción por turno.</li>
+    <li>Control de inventario de repuestos clasificados por tipo.</li>
+  </ul>
+  <h4>🔹 Ejemplo Industrial:</h4>
+  <pre><code>
+produccion_turnos = [120, 135, 110, 145]
 
-    <h2>Resumen de la Clase</h2>
-    <ul>
-        <li>Los arreglos permiten organizar datos de manera ordenada y eficiente.</li>
-        <li>La indexación y slicing facilitan la manipulación de grandes volúmenes de datos.</li>
-        <li>NumPy ofrece optimización adicional para cálculos científicos y de ingeniería.</li>
-    </ul>
+# Promedio de producción
+promedio = sum(produccion_turnos) / len(produccion_turnos)
+print("Promedio de producción diaria:", promedio)
+  </code></pre>
 
-    <footer>
-        <p>Universidad de Guayaquil - Facultad de Ingeniería Industrial</p>
-    </footer>
+  <h3>📷 Imagen de Apoyo: Arreglos visualmente</h3>
+  <div style="text-align:center;">
+    <img src="../images/Arreglo.png" alt="Qué es un arreglo?"><br>
+    <img src="../images/Python-Arrays-Slice-Example-Diagram-1-to-5.webp" alt="Ejemplo de indexación en Arreglo"><br>
+    <img src="../images/Arreglos.png" alt="Ejemplos de Indexación en Arreglos">  
+  </div>
+
+  <h2>🧪 APE - Actividad Práctica Experimental (en clase)</h2>
+  <h4>🔹 Actividad:</h4>
+  <p>Crear un arreglo (lista) de las temperaturas registradas en una planta durante 5 días.</p>
+  <p><strong>Problema:</strong></p>
+  <ul>
+    <li>Registrar las temperaturas.</li>
+    <li>Calcular la temperatura promedio.</li>
+    <li>Identificar si alguna temperatura supera los 30°C.</li>
+  </ul>
+  <h4>Código base:</h4>
+  <pre><code>
+temperaturas = [28, 29, 31, 27, 30]
+
+promedio = sum(temperaturas) / len(temperaturas)
+print("Temperatura promedio:", promedio)
+
+for temp in temperaturas:
+    if temp > 30:
+        print("Alerta: temperatura alta detectada:", temp)
+  </code></pre>
+  <p>Guardar en Online Python y compartir el link.</p>
+
+  <h2>📝 AA - Actividad Autónoma (para casa)</h2>
+  <h4>🔹 Actividad:</h4>
+  <p>Registrar la producción de una línea industrial durante 6 turnos.</p>
+  <p><strong>Problema:</strong></p>
+  <ul>
+    <li>Registrar producción en lista.</li>
+    <li>Calcular producción total.</li>
+    <li>Calcular producción promedio.</li>
+    <li>Identificar turnos con producción menor a 100 unidades.</li>
+  </ul>
+  <h4>Código sugerido:</h4>
+  <pre><code>
+produccion_turnos = [95, 105, 120, 98, 130, 102]
+
+produccion_total = sum(produccion_turnos)
+promedio = produccion_total / len(produccion_turnos)
+
+print("Producción total:", produccion_total)
+print("Promedio de producción:", promedio)
+
+for turno, produccion in enumerate(produccion_turnos, start=1):
+    if produccion < 100:
+        print("Turno", turno, "producción baja:", produccion)
+  </code></pre>
+  <p>Subir el link a Moodle.</p>
+
+  <h2>🎬 Video de Apoyo</h2>
+  <p><a href="https://www.youtube.com/watch?v=JJmcL1N2KQs" target="_blank">▶️ Ver video - Arrays en Python para Principiantes (español)</a></p>
+
+  <h2>✅ Resumen de la Clase 5</h2>
+  <ul>
+    <li>Arreglos son colecciones ordenadas y modificables.</li>
+    <li>Indexación positiva y negativa permiten el acceso eficiente a datos.</li>
+    <li>Slicing extrae subarreglos útiles para análisis parciales.</li>
+    <li>Aplicaciones prácticas en control de procesos e inventarios industriales.</li>
+  </ul>
+
+  <h2>📚 Referencias Bibliográficas (APA 7)</h2>
+  <ul>
+    <li>Programación ATS. (2020). <em>Arreglos en Python</em> [Video]. YouTube. Recuperado de <a href="https://www.youtube.com/watch?v=JJmcL1N2KQs" target="_blank">https://www.youtube.com/watch?v=JJmcL1N2KQs</a></li>
+  </ul>
+
+
+  <footer style="text-align:center; margin-top:40px;">
+    <p>Universidad de Guayaquil - Facultad de Ingeniería Industrial</p>
+  </footer>
+
 </body>
 </html>
