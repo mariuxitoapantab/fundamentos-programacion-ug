@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Clase 8 - Funciones en Python</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 2rem;
+      line-height: 1.6;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    h1, h2, h3 {
+      color: #00509e; /* color de la UG */
+      margin-top: 1.5rem;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    .objetivos ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    .objetivos li::before {
+      content: "📋"; /* icono para objetivos */
+      margin-right: 0.5rem;
+    }
+    .contenido, .ape, .aa, .referencias {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+    code {
+      background: #eee;
+      padding: 0.2rem 0.4rem;
+      border-radius: 0.3rem;
+      display: block;
+      margin: 0.5rem 0;
+    }
+    img {
+      display: block;
+      margin: 1rem auto;
+      max-width: 100%;
+      height: auto;
+      border-radius: 0.3rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .caption {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #555;
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      margin-left: 1.5rem;
+    }
+    .ape li, .aa li {
+      margin-bottom: 0.5rem;
+    }
+    .referencias ul {
+      list-style: disc inside;
+    }
+  </style>
+</head>
+<body>
+  <h1>Clase 8 – Funciones en Python: Sintaxis y Scope</h1>
+
+  <section class="objetivos">
+    <h2>🎯 Objetivos de Aprendizaje</h2>
+    <ul>
+      <li>Entender la sintaxis básica para <strong>definir</strong> y <strong>llamar</strong> funciones en Python.</li>
+      <li>Diferenciar entre <strong>parámetros posicionales</strong>, <strong>parámetros por defecto</strong> y <strong>argumentos nombrados</strong>.</li>
+      <li>Comprender el uso de <code>return</code> y cómo una función puede devolver valores.</li>
+      <li>Aprender el concepto de <strong>ámbito (scope)</strong>: variables locales vs. globales.</li>
+      <li>Aplicar funciones a problemas industriales sencillos (cálculo de área, verificación de métricas).</li>
+    </ul>
+  </section>
+
+  <section class="contenido">
+    <h2>1️⃣ Contenido Académico</h2>
+
+    <h3>1.1 ¿Qué es una Función en Python?</h3>
+    <p>Un bloque de código reutilizable que realiza una tarea específica.</p>
+    <p><strong>Sintaxis básica:</strong></p>
+    <code>
+    def nombre_funcion(param1, param2=valor_por_defecto):<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;"""Docstring opcional que describe la función."""<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;# cuerpo de la función<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;return resultado
+    </code>
+    <p>Para visualizarlo mejor, aquí un diagrama que muestra cada parte:</p>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/a/ac/Python_function_calling_concept.png" alt="Estructura básica de definición de función en Python" />
+    <p class="caption"><em>Figura: Estructura básica de definición de función en Python (parámetros y <code>return</code>).</em></p>
+
+    <h3>1.2 Parámetros y Argumentos</h3>
+    <ul>
+      <li><strong>Parámetros posicionales</strong>: se asignan según el orden en la definición.<br>
+        <code>def suma(a, b): return a + b</code>
+      </li>
+      <li><strong>Parámetros con valor por defecto</strong>: si no pasas el argumento, toma el valor indicado.<br>
+        <code>def potencia(base, exponente=2): return base ** exponente</code>
+      </li>
+      <li><strong>Argumentos nombrados</strong>: puedes invocar a la función indicando explícitamente el nombre del parámetro.<br>
+        <code>def volumen(largo, ancho, alto): return largo * ancho * alto</code><br>
+        <code>volumen(ancho=2, largo=3, alto=4)  # 24</code>
+      </li>
+    </ul>
+
+    <h3>1.3 El <code>return</code> y Valores de Retorno</h3>
+    <p>El comando <code>return</code> detiene la función y devuelve el valor especificado.</p>
+    <code>
+    def verificar_supera_meta(prod, meta):<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;if prod >= meta:<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return True<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;return False
+    </code>
+    <p>Si no incluyes <code>return</code>, Python devuelve <code>None</code> automáticamente.</p>
+
+    <h3>1.4 Ámbito de Variables (<em>Scope</em>)</h3>
+    <p><strong>Variables locales</strong>: definidas dentro de la función. Solo existen mientras la función se ejecuta.<br>
+    <strong>Variables globales</strong>: definidas fuera de cualquier función. Pueden leerse dentro, pero no se recomienda modificarlas ahí.</p>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/a/ad/Lexical_scope.svg" alt="Diagrama de alcance (scope) en Python" />
+    <p class="caption"><em>Figura: Ejemplo de ámbito léxico en Python. Variables locales vs. globales.</em></p>
+    <p><em>Explicación:</em> El recuadro “global” contiene variables accesibles en todo el módulo. Cada función crea un ámbito local para sus variables.</p>
+  </section>
+
+  <section class="ape">
+    <h2>3️⃣ APE – Actividad Práctica Experimental (en clase)</h2>
+    <ol>
+      <li><strong>Función <code>calcular_volumen</code></strong><br>
+        <code>def calcular_volumen(largo, ancho, alto):<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;# Escribe aquí tu código</code>
+      </li>
+      <li><strong>Función <code>clasificar_eficiencia</code></strong><br>
+        <code>def clasificar_eficiencia(eficiencia):<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;# Escribe aquí tu código</code>
+      </li>
+      <li><strong>Función <code>comparar_costos</code></strong><br>
+        <code>def comparar_costos(costoA, costoB):<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;# Escribe aquí tu código</code>
+      </li>
+    </ol>
+    <p>Cada estudiante debe probar sus funciones con distintos valores y compartir un enlace al código en el editor online.</p>
+  </section>
+
+  <section class="aa">
+    <h2>4️⃣ AA – Actividad Autónoma (para casa)</h2>
+    <ol>
+      <li><strong>Función <code>tiempo_entrega</code></strong><br>
+        <code>def tiempo_entrega(distancia, velocidad):<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;# Escribe aquí tu código</code><br>
+        Ejemplo: <code>tiempo_entrega(120, 60) → 2.0</code>
+      </li>
+      <li><strong>Función <code>costos_totales</code></strong><br>
+        <code>def costos_totales(costos, cantidades):<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;# Usa sum y zip para iterar</code><br>
+        Ejemplo: <code>costos_totales([5,7.5,10], [100,200,150]) → 3500</code>
+      </li>
+      <li><strong>Función <code>es_primo</code></strong><br>
+        <code>def es_primo(n):<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;# Escribe aquí tu código</code><br>
+        Ejemplo: <code>es_primo(17) → True</code>
+      </li>
+    </ol>
+    <p>Entregar enlace al código en Moodle antes de la próxima clase.</p>
+  </section>
+
+  <section class="referencias">
+    <h2>5️⃣ Referencias Bibliográficas (APA 7)</h2>
+    <ul>
+      <li>Lutz, M. (2021). <em>Learning Python</em> (5ª ed.). O’Reilly Media.</li>
+      <li>Python Software Foundation. (s.f.). <em>Defining Functions</em>. En Python 3 Documentation. Recuperado 15 mayo 2025, de <a href="https://docs.python.org/3/tutorial/controlflow.html#defining-functions" target="_blank">https://docs.python.org/3/tutorial/controlflow.html#defining-functions</a></li>
+      <li>FreeCodeCamp Español. (2020). <em>Funciones en Python – Tutorial rápido</em> [Video]. YouTube. <a href="https://www.youtube.com/watch?v=9Os0o3wzS_I" target="_blank">https://www.youtube.com/watch?v=9Os0o3wzS_I</a></li>
+    </ul>
+  </section>
+</body>
+</html>
